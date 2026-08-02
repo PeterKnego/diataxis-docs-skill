@@ -1,0 +1,542 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+  <meta name="author" content="Daniele Procida">
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="The difference between reference and explanation" href="../reference-explanation/" /><link rel="prev" title="Towards a theory of quality in documentation" href="../quality/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.2.1 and Furo 2023.09.10 -->
+  
+        <title>The difference between a tutorial and how-to guide - Diátaxis</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/diataxis.css?v=4400b9a8" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-background-secondary: #fff;
+  --color-sidebar-background-border: none;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+      }
+    }
+  }
+</style><script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="documentation-system" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/tutorials-how-to/" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Diátaxis</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/diataxis-white-416.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Home</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start-here/">Start here</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application/">Applying Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/">How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explanation/">Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compass/">The compass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-use-diataxis/">Workflow</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../theory/">Understanding Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../map/">The map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quality/">Quality</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Tutorials and how-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-explanation/">Reference and explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex-hierarchies/">Complex hierarchies</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colophon/">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/">Help translate Diátaxis</a></li>
+</ul>
+
+</div><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="the-difference-between-a-tutorial-and-how-to-guide">
+<span id="tutorials-how-to"></span><h1>The difference between a tutorial and how-to guide<a class="headerlink" href="#the-difference-between-a-tutorial-and-how-to-guide" title="Link to this heading">¶</a></h1>
+<p>In Diátaxis, tutorials and how-to guides are strongly distinguished. It’s a distinction that’s often not made; in fact
+the single most common conflation made in software product documentation is that between the <em>tutorial</em> and the <em>how-to
+guide</em>.</p>
+<p>So: what <em>is</em> the difference between tutorials and how to-guides? Why does it matter? And why do they get confused?</p>
+<p>These are all good questions. Let’s start with the last one. <em>If the distinction is really so important, why isn’t it
+more obvious?</em></p>
+<section id="what-they-have-in-common">
+<h2>What they have in common<a class="headerlink" href="#what-they-have-in-common" title="Link to this heading">¶</a></h2>
+<p>In important respects, tutorials and how-to guides are indeed similar. They are both practical guides: they contain
+directions for the user to follow. They’re not there to explain or convey information. They exist to guide the user in
+what to <em>do</em> rather than what there is <em>to know or understand</em>.</p>
+<p>They both set out steps for the reader to follow, and they both promise that if the reader follows those steps, they’ll
+arrive at a successful conclusion. Neither of them make much sense except for the user who has their hands on the
+machinery, ready to do things. They both describe ordered sequences of actions. You can’t expect success unless you
+perform the actions in the right order.</p>
+<p>They are closely related, and like many close relations, can be mistaken for one another at first glance.</p>
+</section>
+<section id="what-matters-is-what-the-user-needs">
+<h2>What matters is what the user needs<a class="headerlink" href="#what-matters-is-what-the-user-needs" title="Link to this heading">¶</a></h2>
+<p>Diátaxis insists that what matters in documentation is the needs of the user, and it’s by paying
+attention to this that we can correctly distinguish between tutorials and how-to guides.</p>
+<p>Sometimes the user is <strong>at study</strong>, and sometimes the user is <strong>at work</strong>. Documentation has to serve both those needs.</p>
+<p>A tutorial serves the needs of the user who is at study. Its obligation is <em>to provide a successful learning
+experience</em>. A how-to guide serves the needs of the user who is at work. Its obligation is <em>to help the user accomplish
+a task</em>. These are completely different needs and obligations, and they are why the distinction between tutorials and
+how-to guides matters: tutorials are <strong>learning-oriented</strong>, and how-to guides are <strong>task-oriented</strong>.</p>
+</section>
+<section id="at-study-and-at-work">
+<h2>At study and at work<a class="headerlink" href="#at-study-and-at-work" title="Link to this heading">¶</a></h2>
+<p>We can consider this from the perspective of an actual example. Let’s say you’re in medicine: a doctor, someone who
+needs to acquire and apply the practical, clinical skills of their craft.</p>
+<p>As a doctor, sometimes you will be in work situations, <em>applying your skills</em>, and sometimes you will be in study
+situations, <em>acquiring skills</em> (all good doctors, even those with long careers behind them, continue to study to
+improve their skills).</p>
+<section id="at-study">
+<h3>At study<a class="headerlink" href="#at-study" title="Link to this heading">¶</a></h3>
+<p>Early on in your training, you’ll learn how to suture a wound. You’ll start in the lab with your fellow students, at
+benches with small skin pads in front of you (skin pads are blocks of synthetic material in various layers that
+represent the epidermis, fat and other tissues. They have a similar hardness and texture to human flesh, and behave
+somewhat similarly when they’re cut and stitched). You’ll be provided with exactly what you need - gloves, scalpel,
+needle, thread and so on - and step-by-step you’ll be shown what to do, and what will happen when you do it.</p>
+<p>And then it’s your turn. You will pick up the scalpel and tentatively draw it across the top of the pad, and make an
+ineffectual incision into the top layer (maybe a teaching assistant will tease you, asking what this poor pad has done,
+that it deserves such a nasty scratch). Your neighbour will look dismayed at their own attempt, a ragged cut of wildly
+uneven depths that looks like something from a knife-fight.</p>
+<p>After a few attempts, with feedback and correction from the tutor, you’ll have made a more or less clean cut that
+mostly goes through the fat layer without cutting into the muscle beneath. Triumph!</p>
+<img alt="" class="sidebar" src="../_images/suture.jpg" />
+<p>But now you’re being asked to stitch it back up again! You’ll watch the tutor demonstrate deftly and precisely, closing
+the wound in the pad with a few neat, even stitches. You, on the other hand, will fumble with the thread. You will hold
+things in the wrong hand and the wrong way round and put them down in the wrong places. You will drop the needle. The
+thread will fall out. You will be told off for failing to maintain sterility.</p>
+<p>Eventually, you’ll actually get to stitch the wound. You will puncture the skin in the wrong places and tear the edges
+of the cut. Your final result will be an ugly scene of stretched and puckered skin and crude, untidy stitches. The
+teaching assistants will have some critical things to say even about parts of it that you thought you’d got right.</p>
+<p>But, <em>you will have stitched your first wound</em>. And you will come back to this lesson again and again, and bit by bit
+your fumbling will turn into confident practice. You will have acquired basic competence. You will have <strong>learned by
+doing</strong>.</p>
+<p>This is a tutorial. It’s a <em>lesson</em>, safely in the hands of an instructor, a teacher who looks after the interests of a
+pupil.</p>
+</section>
+<section id="at-work">
+<h3>At work<a class="headerlink" href="#at-work" title="Link to this heading">¶</a></h3>
+<p>Now, let’s think about the doctor at work. As a doctor at work, you are already competent. You have learned and refined
+clinical skills such as suturing, as well as many others, and you’re able to put them together on a daily basis to
+apply them to medical situations in the real world.</p>
+<p>Consider a standard appendectomy. A clinical manual will list the equipment and personnel required in the theatre. It
+will show how to station the members of the team, and how to lay out the required tools, stands and monitors. It will
+proceed step-by-step through the actions the team will need to follow, ending with the formal handover to the
+post-operative team.</p>
+<img alt="" class="sidebar" src="../_images/operation.jpg" />
+<p>The manual will show what incisions need to be made where, but they will depend on whether you’re performing an open or
+a laparoscopic procedure, whether you have pre-operative imaging to rely on or not, and so on. It will include special
+steps or checks to be made in the case of an infant or juvenile patient, or when converting to an open appendectomy
+mid-procedure. Many of the steps will be of the form <em>if this, then that</em>.</p>
+<p>Having a manual helps ensure that all the steps are done in the right order and none are omitted. As a team, you’ll
+check through details of a procedure to remind yourselves of key steps; sometimes you’ll refer to it during the
+procedure itself.</p>
+<p>Even for routine surgical operations, clinical manuals contain lists of steps and checks. These manuals are how-to
+guides. They are not there to teach you - you already have your skills. You already know these processes. They are
+there to guide you safely in your clinical practice to accomplish a particular task - <strong>they serve your work</strong>.</p>
+</section>
+</section>
+<section id="understanding-the-distinction">
+<h2>Understanding the distinction<a class="headerlink" href="#understanding-the-distinction" title="Link to this heading">¶</a></h2>
+<p>The distinction between a lesson in medical school and a clinical manual is the distinction between a tutorial and a
+how-to guide.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 lined docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p>A tutorial’s purpose is <strong>to help the pupil acquire basic competence</strong>.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A how-to guide’s purpose is <strong>to help the already-competent user perform a particular task
+correctly</strong>.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A tutorial <strong>provides a learning experience</strong>. People learn skills through practical, hands-on experience. What matters
+in a tutorial is what the learner <em>does</em>, and what they experience while doing it.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A how-to guide <strong>directs the user’s work</strong>.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The tutorial follows a <strong>carefully-managed path</strong>, starting at a given point and working to
+a conclusion. Along that path, the learner must have the <em>encounters</em> that the lesson
+requires.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The how-to guide aims for a successful <em>result</em>, and guides the user along the safest,
+surest way to the goal, but <strong>the path can’t be managed</strong>: it’s the real world, and
+anything could appear to disrupt the journey.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A tutorial <strong>familiarises the learner</strong> with the work: with the tools, the language, the processes and the way that
+what they’re working with behaves and responds, and so on. Its job is to introduce them, manufacturing a structured,
+repeatable encounter with them.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The how-to guide can and should <strong>assume familiarity</strong> with them all.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The tutorial takes place in a <strong>contrived setting</strong>, a learning environment where as much as possible is set
+out in advance to ensure a successful experience.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A how-to guide applies to the <strong>real world</strong>, where you have to deal
+with what it throws at you.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The tutorial <strong>eliminates the unexpected</strong>.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The how-to guide must <strong>prepare for the unexpected</strong>, alerting the user to its possibility
+and providing guidance on how to deal with it.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A tutorial’s path follows a single line. <strong>It doesn’t offer choices or alternatives</strong>.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A <strong>how-to guide will typically fork and branch</strong>, describing different routes
+to the same destination: <em>If this, then that. In the case of …, an alternative approach
+is to…</em></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A tutorial <strong>must be safe</strong>. No harm should come to the learner; it must always be possible to go back to the beginning
+and start again.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A how-to guide <strong>cannot promise safety</strong>; often there’s only one chance to get it right.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>In a tutorial, <strong>responsibility lies with the teacher</strong>. If the learner gets into trouble, that’s the teacher’s problem
+to put right.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>In a how-to guide, <strong>the user has responsibility</strong> for getting themselves in and out of trouble.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The learner <strong>may not even have sufficient competence to ask the questions</strong> that a tutorial answers.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A how-to guide can assume that <strong>the user is asking the right questions in the first
+place</strong>.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The tutorial is <strong>explicit about basic things</strong> - where to do things, where to put them, how to manipulate objects. It
+addresses the embodied experience - in our medical example, how hard to press, how to hold an implement; in a software
+tutorial, it could be where to type a command, or how long to wait for a response.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A how-to guide relies on this as <strong>implicit knowledge</strong> - even bodily knowledge.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>A tutorial is <strong>concrete and particular</strong> in its approach. It refers to the specific, known, defined tools, materials,
+processes and conditions that we have carefully set before the learner.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The how-to guide has to take a <strong>general</strong> approach: many of these things will be
+unknowable in advance, or different in each real-world case.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The tutorial <strong>teaches general skills and principles</strong> that later could be applied to a
+multitude of cases.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The user following a how-to guide is doing so in order to <strong>complete a particular task</strong>.</p>
+</div>
+</div>
+</div>
+<p>None of these distinctions are arbitrary. They all emerge from the distinction between <strong>study</strong> and <strong>work</strong>, which we
+understand as a key distinction in making sense of what the user of documentation needs.</p>
+</section>
+<section id="the-basic-and-the-advanced">
+<h2>The basic and the advanced<a class="headerlink" href="#the-basic-and-the-advanced" title="Link to this heading">¶</a></h2>
+<p>A common but understandable conflation is to see the difference between tutorials and how-to guides as being the difference
+between <strong>the basic</strong> and <strong>the advanced</strong>.</p>
+<p>After all, tutorials are for learners, while how-to guides are for already-skilled practitioners. Tutorials must cover
+the basics, while how-to guides have to deal with complexities that learners should not have to face.</p>
+<p>However, there’s more to the story. Consider a clinical procedure manual: it could be a manual for a basic routine
+procedure, of very low complexity. It could describe steps for mundane matters such as correct completion of paperwork
+or disposal of particular materials. <em>How-to guides can, do and often should cover basic procedures.</em></p>
+<p>At the same time, even as a qualified doctor, you will find yourself back in training situations. Some of them may be
+very advanced and specialised, requiring a high level of skill and expertise already.</p>
+<p>Let’s say you’re an anaesthetist of many years’ experience, who attends a course: “Difficult neonatal intubations”. The
+practical part of the course will be a learning experience: a lesson, safely in the hands of the instructors, that will
+have you performing particular exercises to develop your skills - just as it was when years earlier, you were learning
+to suture your first wound.</p>
+<p>The complexity is wholly different though, and so is the baseline of skills required even to participate in the
+learning experience. But, it’s of the same form, and serves the same kind of need, as that much earlier lesson.</p>
+<p>It’s the same in software documentation: a tutorial can present something complex or advanced. And, a how-to guide can
+cover something that’s basic or well-known. The difference between the two lies in the need they serve: <strong>the user’s
+study</strong>, or <strong>their work</strong>.</p>
+</section>
+<section id="safety-and-success">
+<h2>Safety and success<a class="headerlink" href="#safety-and-success" title="Link to this heading">¶</a></h2>
+<p>Understanding these distinctions, and the reason for upholding them, is crucial to creating successful documentation. A
+clinical manual that conflated education with practice, that tried to teach while at the same time providing a guide to
+a real-world procedure would be a literally deadly document. It would kill people.</p>
+<p>In disciplines such as software documentation, we get away with a great deal, because our conflations and mistakes
+rarely kill anyone. However, we can cause a great deal of low-level inconvenience and unhappiness to our users, and we
+add to it, every single time we publish a tutorial or how-to guide that doesn’t understand whether its purpose is to
+help the user in their study - the acquisition of skills - or in their work - the application of skills.</p>
+<p>What’s more, we hurt ourselves too. Users don’t have to use our product. If our documentation doesn’t bring them to
+success - if it doesn’t meet the needs that they have at a particular stage in their cycle of interaction with our
+product - they will find something else that does, if they can.</p>
+<p>The conflation of tutorials and how-to guides is by no means the only one made between different kinds of
+documentation, but it’s one of the easiest to make. It’s also a particularly harmful one, because it risks getting in
+the way of those newcomers whom we hope to turn into committed users. For the sake of those users, and of our own
+product, getting the distinction right is a key to success.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  <div class="related-pages">
+    <a class="next-page" href="../reference-explanation/">
+        <div class="page-info">
+          <div class="context">
+            <span>Next</span>
+          </div>
+          <div class="title">The difference between reference and explanation</div>
+        </div>
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      </a>
+    <a class="prev-page" href="../quality/">
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+        <div class="page-info">
+          <div class="context">
+            <span>Previous</span>
+          </div>
+          
+          <div class="title">Towards a theory of quality in documentation</div>
+          
+        </div>
+      </a>
+  </div>
+  <div class="bottom-of-page">
+    <div class="left-details">
+      <div class="copyright">
+          Copyright &#169; Daniele Procida
+      </div>
+    </div>
+    <div class="right-details">
+      
+    </div>
+  </div>
+  
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">The difference between a tutorial and how-to guide</a><ul>
+<li><a class="reference internal" href="#what-they-have-in-common">What they have in common</a></li>
+<li><a class="reference internal" href="#what-matters-is-what-the-user-needs">What matters is what the user needs</a></li>
+<li><a class="reference internal" href="#at-study-and-at-work">At study and at work</a><ul>
+<li><a class="reference internal" href="#at-study">At study</a></li>
+<li><a class="reference internal" href="#at-work">At work</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#understanding-the-distinction">Understanding the distinction</a></li>
+<li><a class="reference internal" href="#the-basic-and-the-advanced">The basic and the advanced</a></li>
+<li><a class="reference internal" href="#safety-and-success">Safety and success</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>

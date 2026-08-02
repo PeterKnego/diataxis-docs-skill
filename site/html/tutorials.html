@@ -1,0 +1,485 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+  <meta name="author" content="Daniele Procida">
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="How-to guides" href="../how-to-guides/" /><link rel="prev" title="Applying Diátaxis" href="../application/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.2.1 and Furo 2023.09.10 -->
+  
+        <title>Tutorials - Diátaxis</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/diataxis.css?v=4400b9a8" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-background-secondary: #fff;
+  --color-sidebar-background-border: none;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+      }
+    }
+  }
+</style><script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="documentation-system" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/tutorials/" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Diátaxis</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/diataxis-white-416.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Home</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start-here/">Start here</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../application/">Applying Diátaxis</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/">How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explanation/">Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compass/">The compass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-use-diataxis/">Workflow</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/">Understanding Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../map/">The map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quality/">Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials-how-to/">Tutorials and how-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-explanation/">Reference and explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex-hierarchies/">Complex hierarchies</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colophon/">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/">Help translate Diátaxis</a></li>
+</ul>
+
+</div><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="tutorials">
+<span id="id1"></span><h1>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading">¶</a></h1>
+<p class="rubric">A tutorial is an <strong>experience</strong> that takes place under the guidance of a tutor. A tutorial is always <strong>learning-oriented</strong>.</p>
+<hr class="docutils" />
+<p>A tutorial is a <em>practical activity</em>, in which the student learns by doing something meaningful, towards some achievable goal.</p>
+<p>A tutorial serves the user’s <em>acquisition</em> of skills and knowledge - their study. Its purpose is not to help the user get something done, but to help them learn.</p>
+<img alt="Tutorials - learning-oriented guides that describe practical steps and are intended to serve our study." class="sidebar" src="../_images/overview-tutorials.png" />
+<p>A tutorial in other words is a lesson.</p>
+<p>It’s important to understand that while a student will learn by doing, what the student <em>does</em> is not necessarily what they <em>learn</em>. Through doing, they will acquire theoretical knowledge (i.e. facts), understanding, familiarity. They will learn how things relate to each other and interact, and how to interact with them. They will learn the names of things, the use of tools, workflows, concepts, commands. And so on.</p>
+<hr class="docutils" />
+<section id="the-tutorial-as-a-lesson">
+<h2>The tutorial as a lesson<a class="headerlink" href="#the-tutorial-as-a-lesson" title="Link to this heading">¶</a></h2>
+<p>A lesson entails a relationship between a teacher and a pupil. In all learning of this kind, <em>learning takes place as the pupil applies themself to tasks under the instructor’s guidance</em>.</p>
+<p>A lesson is a <em>learning experience</em>. In a learning experience, what matters is what the learner does and what happens. By contrast, the teacher’s explanations and recitations of fact are far less important.</p>
+<p>A good lesson gives the learner confidence, by showing them that they can be successful in a certain skill or with a certain product.</p>
+<section id="obligations-of-the-teacher">
+<h3>Obligations of the teacher<a class="headerlink" href="#obligations-of-the-teacher" title="Link to this heading">¶</a></h3>
+<aside class="sidebar">
+<p>It’s not easy being a teacher.</p>
+</aside>
+<p>A lesson is a kind of contract between teacher and student, in which nearly all the responsibility falls upon the teacher. The teacher has responsibility for what the pupil is to learn, what the pupil will do in order to learn it, and for the pupil’s success. Meanwhile, the only responsibility of the pupil in this contract is to be attentive and to follow the teacher’s directions as closely as they can. There is no responsibility on the pupil to learn, understand or remember.</p>
+<p>At the same time, the exercise you put your pupils through must be:</p>
+<ul class="simple">
+<li><p><em>meaningful</em> - the pupil needs to have a sense of achievement</p></li>
+<li><p><em>successful</em> - the pupil needs to be able to complete it</p></li>
+<li><p><em>logical</em> - the path that the pupil takes through it needs to make sense</p></li>
+<li><p><em>usefully complete</em> - the pupil must have an encounter with all of the actions, concepts and tools they need to become familiar with</p></li>
+</ul>
+</section>
+<section id="the-problem-of-tutorials">
+<h3>The problem of tutorials<a class="headerlink" href="#the-problem-of-tutorials" title="Link to this heading">¶</a></h3>
+<p>Tutorials are rarely done well, partly because they are genuinely difficult to do well, and partly because they are not well understood. In software, many products lack good tutorials, or lack tutorials completely; tutorials are often conflated with how-to guides.</p>
+<p>In an ideal lesson, the teacher is present and interacts with and responds to the student, correcting their mistakes and checking their learning. In documentation, none of this is possible.</p>
+<aside class="sidebar">
+<p>Writing and maintaining tutorials can consume a remarkable amount of effort and time.</p>
+</aside>
+<p>It’s hard enough to put together a learning experience that meets all the standards described above; in many contexts the product itself evolves rapidly, meaning that all that work needs to be done again to ensure that the tutorial still performs its required functions.</p>
+<p>You will also often find that no other part of your documentation is subject to revisions the way your tutorials are. Elsewhere in documentation, changes and improvements can generally be made discretely; in tutorials, where the end-to-end learning journey must make sense, they often cascade through the entire story.</p>
+<p>Finally, tutorials contain the additional complication of the distinction between <em>what is to be learned</em> and <em>what is to be done</em>. Not only must the creator of a tutorial have a good sense of what the user must learn, and when, they must also devise a meaningful learning journey that somehow delivers all that.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-principles">
+<h2>Key principles<a class="headerlink" href="#key-principles" title="Link to this heading">¶</a></h2>
+<p>A tutorial is a pedagogical problem.</p>
+<p>It’s not an easy problem, but neither is it a mystery. The principles outlined below - repetition, action, small steps, results early and often, concreteness and so on - are not secrets, but they are not always well understood.</p>
+<p>Still, there are straightforward, effective ways to address the problems of pedagogy in practice.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Anti-pedagogical temptations</p>
+<ul class="simple">
+<li><p>abstraction, generalisation</p></li>
+<li><p>explanation</p></li>
+<li><p>choices</p></li>
+<li><p>information</p></li>
+</ul>
+</aside>
+<p>The first rule of teaching is simply: <strong>don’t try to teach</strong>. Your job, as a teacher, is to provide the learner with an experience that will allow them to learn. A teacher inevitably feels a kind of anxiety to impart knowledge and understanding, but if you give into it and try to teach by telling and explaining, you will jeopardise the learning experience.</p>
+<p>Instead, <em>allow learning to take place</em>, and trust that it will. Give your learner things to <em>do</em>, through which they can learn. Only your pupil can learn. Sadly, however much you desire it, you will not be able to learn for your pupil. You cannot make them learn. All you can do is make it so <em>they</em> can learn.</p>
+<section id="show-the-learner-where-they-ll-be-going">
+<h3>Show the learner where they’ll be going<a class="headerlink" href="#show-the-learner-where-they-ll-be-going" title="Link to this heading">¶</a></h3>
+<p>It’s important to allow the learner to form an idea of what they will achieve right from the start. As well as helping to set expectations, it allows them to see themselves building towards the completed goal as they work.</p>
+<p>Providing the picture the learner needs in a tutorial can be as simple as informing them at the outset: <em>In this tutorial we will create and deploy a scalable web application. Along the way we will encounter containerisation tools and services.</em></p>
+<p>This is not the same as saying: <em>In this tutorial you will learn…</em> - which is presumptuous and a very poor pattern.</p>
+</section>
+<section id="deliver-visible-results-early-and-often">
+<h3>Deliver visible results early and often<a class="headerlink" href="#deliver-visible-results-early-and-often" title="Link to this heading">¶</a></h3>
+<p>Your learner is probably doing new and strange things that they don’t fully understand. Understanding comes from being able to make connections between causes and effects, so let them see the results and make the connections rapidly and repeatedly. Each one of those results should be something that the user can see as meaningful.</p>
+<p>Every step the learner follows should produce a comprehensible result, however small.</p>
+</section>
+<section id="maintain-a-narrative-of-the-expected">
+<h3>Maintain a narrative of the expected<a class="headerlink" href="#maintain-a-narrative-of-the-expected" title="Link to this heading">¶</a></h3>
+<p>At every step of a tutorial, the user experiences a moment of anxiety: will this action produce the correct result? Part of the work of a successful tutorial is to keep providing feedback to the learner that they are indeed on the right path.</p>
+<p>Keep up a narrative of expectations: “You will notice that …”; “After a few moments, the server responds with …”. Show the user actual example output, or even the exact expected output.</p>
+<p>If you know in advance what the likely signs of going wrong are, consider flagging them: “If the output doesn’t show …, you have probably forgotten to …”.</p>
+<p>It’s helpful to prepare the user for possibly surprising actions: “The command will probably return several hundred lines of logs in your terminal.”</p>
+</section>
+<section id="point-out-what-the-learner-should-notice">
+<h3>Point out what the learner should notice<a class="headerlink" href="#point-out-what-the-learner-should-notice" title="Link to this heading">¶</a></h3>
+<p>Learning requires reflection. This happens at multiple levels and depths, but one of the first is when the learner  observes the signs in their environment. In a lesson, a learner is typically too focused on what they are doing to notice them, unless they are prompted by the teacher.</p>
+<p>Your job as teacher is to close the loops of learning by pointing things out, in passing, as the lesson moves along. This can be as simple as pointing out how a command line prompt changes, for example.</p>
+<p>Observing is an active part of a craft, not a merely passive one. It means paying attention to the environment, a skill in itself. It’s often neglected.</p>
+</section>
+<section id="target-the-feeling-of-doing">
+<h3>Target <em>the feeling of doing</em><a class="headerlink" href="#target-the-feeling-of-doing" title="Link to this heading">¶</a></h3>
+<p>In all skill or craft, the accomplished practitioner experiences a <em>feeling of doing</em>, a joined-up purpose, action, thinking and result.</p>
+<p>As skill develops, it flows in a confident rhythm and becomes a kind of pleasure. It’s the pleasure of walking, for example.</p>
+<aside class="sidebar">
+<p>Pay attention to your own <em>feeling of doing</em> in your work. What is it like to perform a particular operation?</p>
+</aside>
+<p>Your learner’s skill depends upon their discovering this feeling, and its becoming a pleasure.</p>
+<p>Your challenge as the creator of a tutorial is to ensure that its tasks tie together purpose and action so they become a cradle for this feeling.</p>
+</section>
+<section id="encourage-and-permit-repetition">
+<h3>Encourage and permit repetition<a class="headerlink" href="#encourage-and-permit-repetition" title="Link to this heading">¶</a></h3>
+<p>Learners will return to and repeat an exercise that gives them success, for the pleasure they find in getting the expected result. Doing so reaffirms to them that they can do it, and that it works.</p>
+<p>Repetition is a key to establishing the feeling of doing; being at home with that feeling is a foundational layer of learning.</p>
+<aside class="sidebar">
+<p>Repetition is not the best teacher - sometimes it’s the <em>only</em> teacher.</p>
+</aside>
+<p>In your tutorial, try to make it possible for a particular step and result to be repeated. This can be difficult, for example in operations that are not reversible (making it hard to go back to a previous step) - but seek it wherever you can. Watching a user follow a tutorial, you may often be amazed to see how often they choose to repeat a step. They are doing it just to see that the same thing really does happen again.</p>
+</section>
+<section id="ruthlessly-minimise-explanation">
+<h3>Ruthlessly minimise explanation<a class="headerlink" href="#ruthlessly-minimise-explanation" title="Link to this heading">¶</a></h3>
+<p><em>A tutorial is not the place for explanation.</em> In a tutorial, the user is focused on correctly following your directions and getting the expected results. <em>Later</em>, when they are ready, they will seek explanation, but right now they are concerned with <em>doing</em>. Explanation distracts their attention from that, and blocks their learning.</p>
+<p>For example, it’s quite enough to say something like: <em>We’re using HTTPS because it’s more secure.</em> There is a place for extended discussion and explanation of HTTPS, but not now. Instead, provide a link or reference to that explanation, so that it’s available, but doesn’t get in the way.</p>
+<aside class="sidebar">
+<p>Explanation is only pertinent at the moment the <em>user</em> wants it. It is not for the documentation author to decide.</p>
+</aside>
+<p>Explanation is one of the hardest temptations for a teacher to resist; even experienced teachers find it difficult to accept that their students’ learning does not depend on explanation. This is perfectly natural. Once we have grasped something, we rely on the power of abstraction to frame it to ourselves - and that’s how we want to frame it to others. Understanding means grasping general ideas, and abstraction is the logical form of understanding - but these are not what we need in a tutorial, and it’s not how successful learning or teaching works.</p>
+<p>One must see it for oneself, to see the focused attention of a student dissolve into air, when a teacher’s well-intentioned explanation breaks the magic spell of learning.</p>
+</section>
+<section id="and-focus-on-the-concrete">
+<h3>… and focus on the concrete<a class="headerlink" href="#and-focus-on-the-concrete" title="Link to this heading">¶</a></h3>
+<p>In a learning situation, your student is in the moment, a moment composed of concrete things. You are responsible for setting up and maintaining the student’s flow, from one concrete action and result to another.</p>
+<p>Focus on <em>this</em> problem, <em>this</em> action, <em>this</em> result, in such a way that you lead the learner from step to concrete step.</p>
+<p>It might seem that by maintaining focus on the concrete and particular that you deny the student the opportunity to see or grasp the larger general patterns, but the contrary is true. The one thing our minds do spectacularly well is to perceive general patterns from concrete examples. All learning moves in one direction: from the concrete and particular, towards the general and abstract. The latter <em>will</em> emerge from the former.</p>
+</section>
+<section id="ignore-options-and-alternatives">
+<h3>Ignore options and alternatives<a class="headerlink" href="#ignore-options-and-alternatives" title="Link to this heading">¶</a></h3>
+<p>Your job is to guide the learner to a successful conclusion. There may be many interesting diversions along the way (different options for the command you’re using, different ways to use the API, different approaches to the task you’re describing) - ignore them. <em>Your guidance needs to remain focused on what’s required to reach the conclusion</em>, and everything else can be left for another time.</p>
+<p>Doing this helps keep your tutorial shorter and crisper, and saves both you and the reader from having to do extra cognitive work.</p>
+</section>
+<section id="aspire-to-perfect-reliability">
+<h3>Aspire to perfect reliability<a class="headerlink" href="#aspire-to-perfect-reliability" title="Link to this heading">¶</a></h3>
+<p>All of the above are general principles of pedagogy, but there is a special burden on the creator of a tutorial.</p>
+<p>A tutorial must inspire confidence. Confidence can only be built up layer by layer, and is easily shaken. At every stage, when you ask your student to do something, they must see the result you promise. A learner who follows your directions and doesn’t get the expected results will quickly lose confidence, in the tutorial, the tutor and themselves.</p>
+<aside class="sidebar">
+<p>You are required to be present, but condemned to be absent.</p>
+</aside>
+<p>A teacher who’s there with the learner can rescue them when things go wrong. In a tutorial, you can’t do that. Your tutorial ought to be so well constructed that things <em>can’t</em> go wrong, that your tutorial works for every user, every time.</p>
+<p>It’s hard work to create a reliable experience, but that is what you must aspire to in creating a tutorial.</p>
+<p>Your tutorial will have flaws and gaps, however carefully it is written. You won’t discover them all by yourself, you will have to rely on users to discover them for you. The only way to learn what they are is by finding out what actually happens when users do the tutorial, through extensive testing and observation.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-language-of-tutorials">
+<h2>The language of tutorials<a class="headerlink" href="#the-language-of-tutorials" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>We …</dt><dd><p>The first-person plural affirms the relationship between tutor and learner: you are not alone; we are in this together.</p>
+</dd>
+<dt>In this tutorial, we will …</dt><dd><p>Describe what the learner will accomplish.</p>
+</dd>
+<dt>First, do x. Now, do y. Now that you have done y, do z.</dt><dd><p>No room for ambiguity or doubt.</p>
+</dd>
+<dt>We must always do x before we do y because… (see Explanation for more details).</dt><dd><p>Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.</p>
+</dd>
+<dt>The output should look something like …</dt><dd><p>Give your learner clear expectations.</p>
+</dd>
+<dt>Notice that … Remember that … Let’s check …</dt><dd><p>Give your learner plenty of clues to help confirm they are on the right track and orient themselves.</p>
+</dd>
+<dt>You have built a secure, three-layer hylomorphic stasis engine…</dt><dd><p>Describe (and admire, in a mild way) what your learner has accomplished.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="applied-to-food-and-cooking">
+<h2>Applied to food and cooking<a class="headerlink" href="#applied-to-food-and-cooking" title="Link to this heading">¶</a></h2>
+<img alt="A child proudly showing a dish he has helped prepare" src="../_images/anselmo.jpg" />
+<p>Someone who has had the experience of teaching a child to cook will understand what matters in a tutorial, and just as importantly, the things that don’t matter at all.</p>
+<p>It really doesn’t matter what the child makes, or how correctly they do it. The value of a lesson lies in what the child gains, not what they produce.</p>
+<p>Success in a cooking lesson with a child is not the culinary outcome, or whether the child can now repeat the processes on their own. Success is when the child acquires the knowledge and skills you were hoping to impart.</p>
+<p>It’s a crucial condition of this that the child discovers pleasure in the experience of being in the kitchen with you, and wants to return to it. Learning a skill is never a once and for all matter. Repetition is always required.</p>
+<p>Meanwhile, the cooking lesson might be framed around the idea of learning how to prepare a particular dish, but what we actually need the child to learn might be things like: <em>that we wash our hands before handling food</em>; <em>how to hold a knife</em>; <em>why the oil must be hot</em>; <em>what this utensil is called</em>, <em>how to time and measure things</em>.</p>
+<p>The child learns all this by working alongside you in the kitchen; in its own time, at its own pace, <strong>through the activities</strong> you do together, and not from the things you say or show.</p>
+<p>With a young child, you will often find that the lesson suddenly has to end before you’d completed what you set out to do. This is normal and expected; children have short attention spans. But as long as the child managed to achieve something - however small - and enjoyed doing it, it will have laid down something in the construction of its technical expertise, that can be returned to and built upon next time.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  <div class="related-pages">
+    <a class="next-page" href="../how-to-guides/">
+        <div class="page-info">
+          <div class="context">
+            <span>Next</span>
+          </div>
+          <div class="title">How-to guides</div>
+        </div>
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      </a>
+    <a class="prev-page" href="../application/">
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+        <div class="page-info">
+          <div class="context">
+            <span>Previous</span>
+          </div>
+          
+          <div class="title">Applying Diátaxis</div>
+          
+        </div>
+      </a>
+  </div>
+  <div class="bottom-of-page">
+    <div class="left-details">
+      <div class="copyright">
+          Copyright &#169; Daniele Procida
+      </div>
+    </div>
+    <div class="right-details">
+      
+    </div>
+  </div>
+  
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Tutorials</a><ul>
+<li><a class="reference internal" href="#the-tutorial-as-a-lesson">The tutorial as a lesson</a><ul>
+<li><a class="reference internal" href="#obligations-of-the-teacher">Obligations of the teacher</a></li>
+<li><a class="reference internal" href="#the-problem-of-tutorials">The problem of tutorials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#key-principles">Key principles</a><ul>
+<li><a class="reference internal" href="#show-the-learner-where-they-ll-be-going">Show the learner where they’ll be going</a></li>
+<li><a class="reference internal" href="#deliver-visible-results-early-and-often">Deliver visible results early and often</a></li>
+<li><a class="reference internal" href="#maintain-a-narrative-of-the-expected">Maintain a narrative of the expected</a></li>
+<li><a class="reference internal" href="#point-out-what-the-learner-should-notice">Point out what the learner should notice</a></li>
+<li><a class="reference internal" href="#target-the-feeling-of-doing">Target <em>the feeling of doing</em></a></li>
+<li><a class="reference internal" href="#encourage-and-permit-repetition">Encourage and permit repetition</a></li>
+<li><a class="reference internal" href="#ruthlessly-minimise-explanation">Ruthlessly minimise explanation</a></li>
+<li><a class="reference internal" href="#and-focus-on-the-concrete">… and focus on the concrete</a></li>
+<li><a class="reference internal" href="#ignore-options-and-alternatives">Ignore options and alternatives</a></li>
+<li><a class="reference internal" href="#aspire-to-perfect-reliability">Aspire to perfect reliability</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-language-of-tutorials">The language of tutorials</a></li>
+<li><a class="reference internal" href="#applied-to-food-and-cooking">Applied to food and cooking</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>

@@ -1,0 +1,542 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+  <meta name="author" content="Daniele Procida">
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Colophon" href="../colophon/" /><link rel="prev" title="The difference between reference and explanation" href="../reference-explanation/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.2.1 and Furo 2023.09.10 -->
+  
+        <title>Diátaxis in complex hierarchies - Diátaxis</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/diataxis.css?v=4400b9a8" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-background-secondary: #fff;
+  --color-sidebar-background-border: none;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+      }
+    }
+  }
+</style><script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="documentation-system" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/complex-hierarchies/" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Diátaxis</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/diataxis-white-416.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Home</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start-here/">Start here</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application/">Applying Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/">How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explanation/">Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compass/">The compass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-use-diataxis/">Workflow</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../theory/">Understanding Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../map/">The map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quality/">Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials-how-to/">Tutorials and how-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-explanation/">Reference and explanation</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Complex hierarchies</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colophon/">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/">Help translate Diátaxis</a></li>
+</ul>
+
+</div><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="diataxis-in-complex-hierarchies">
+<span id="complex-documentation"></span><h1>Diátaxis in complex hierarchies<a class="headerlink" href="#diataxis-in-complex-hierarchies" title="Link to this heading">¶</a></h1>
+<section id="structure-of-documentation-content">
+<span id="basic-structure"></span><h2>Structure of documentation content<a class="headerlink" href="#structure-of-documentation-content" title="Link to this heading">¶</a></h2>
+<p>The application of Diátaxis to most documentation is fairly straightforward.
+The product that defines the domain of concern has clear boundaries, and it’s
+possible to come up with an arrangement of documentation contents that looks - for example - like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Home                      &lt;- landing page
+    Tutorial              &lt;- landing page
+        Part 1
+        Part 2
+        Part 3
+    How-to guides         &lt;- landing page
+        Install
+        Deploy
+        Scale
+    Reference             &lt;- landing page
+        Command-line tool
+        Available endpoints
+        API
+    Explanation           &lt;- landing page
+        Best practice recommendations
+        Security overview
+        Performance
+</pre></div>
+</div>
+<p>In each case, a landing page contains an overview of the contents within. The
+tutorial for example describes what the tutorial has to offer, providing
+context for it.</p>
+<section id="adding-a-layer-of-hierarchy">
+<h3>Adding a layer of hierarchy<a class="headerlink" href="#adding-a-layer-of-hierarchy" title="Link to this heading">¶</a></h3>
+<p>Even very large documentation sets can use this effectively, though after a
+while some grouping of content within sections might be wise. This can be done
+by adding another layer of hierarchy - for example to be able to address
+different installation options separately:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Home                      &lt;- landing page
+    Tutorial              &lt;- landing page
+        Part 1
+        Part 2
+        Part 3
+    How-to guides         &lt;- landing page
+<span class="hll">        Install           &lt;- landing page
+</span><span class="hll">            Local installation
+</span><span class="hll">            Docker
+</span><span class="hll">            Virtual machine
+</span><span class="hll">            Linux container
+</span>        Deploy
+        Scale
+    Reference             &lt;- landing page
+        Command-line tool
+        Available endpoints
+        API
+    Explanation           &lt;- landing page
+        Best practice recommendations
+        Security overview
+        Performance
+</pre></div>
+</div>
+</section>
+</section>
+<section id="contents-pages">
+<h2>Contents pages<a class="headerlink" href="#contents-pages" title="Link to this heading">¶</a></h2>
+<p>Contents pages - typically a home page and any landing pages - provide an overview of the material they encompass.</p>
+<p>There is an art to creating a good contents page. The experience they give the users deserves careful consideration.</p>
+<section id="the-problem-of-lists">
+<h3>The problem of lists<a class="headerlink" href="#the-problem-of-lists" title="Link to this heading">¶</a></h3>
+<p>Lists longer than a few items are very hard for humans to read, unless they
+have an inherent mechanical order - numerical, or alphabetical. <em>Seven items
+seems to be a comfortable general limit.</em> If you find that you’re looking at
+lists longer than that in your tables of contents, you probably need to find a way to
+break them up into small ones.</p>
+<p>As always, what matters most is <strong>the experience of the reader</strong>. Diátaxis works
+because it fits user needs well - if your execution of Diátaxis leads you to
+formats that seem uncomfortable or ugly, then you need to use it
+differently.</p>
+</section>
+<section id="overviews-and-introductory-text">
+<h3>Overviews and introductory text<a class="headerlink" href="#overviews-and-introductory-text" title="Link to this heading">¶</a></h3>
+<p><strong>The content of a landing page itself should read like an overview.</strong></p>
+<p>That is, it should not simply present lists of other content, it should
+introduce them. <em>Remember that you are always authoring for a human user, not
+fulfilling the demands of a scheme.</em></p>
+<p>Headings and snippets of introductory text catch the eye and provide context;
+for example, a <strong>how-to landing page</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>How to guides
+=============
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Installation guides
+-------------------
+
+Pellentesque malesuada, ipsum ac mollis pellentesque, risus
+nunc ornare odio, et imperdiet dui mi et dui. Phasellus vel
+porta turpis. In feugiat ultricies ipsum.
+
+* Local installation       |
+* Docker                   |  links to
+* Virtual machines         |  the guides
+* Linux containers         |
+
+Deployment and scaling
+-----------------------
+
+Morbi sed scelerisque ligula. In dictum lacus quis felis
+facilisisvulputate. Quisque lacinia condimentum ipsum
+laoreet tempus.
+
+* Deploy an instance       |  links to
+* Scale your application   |  the guides
+</pre></div>
+</div>
+</section>
+</section>
+<section id="two-dimensional-problems">
+<h2>Two-dimensional problems<a class="headerlink" href="#two-dimensional-problems" title="Link to this heading">¶</a></h2>
+<p>A more difficult problem is when the structure outlined by Diátaxis meets
+another structure - often, a structure of topic areas within the
+documentation, or when documentation encounters very different user-types.</p>
+<p>For example we might have a product that is used on land, sea and air, and
+though the same product, is used quite differently in each case. And it could
+be that a user who uses it on land is very unlikely to use it at sea.</p>
+<p>Or, the product documentation addresses the needs of:</p>
+<ul class="simple">
+<li><p>users</p></li>
+<li><p>developers who build other products around it</p></li>
+<li><p>the contributors who help maintain it.</p></li>
+</ul>
+<p>The same product, but very different concerns.</p>
+<p>A final example: a product that can be deployed on different public clouds,
+with each public cloud presenting quite different workflows, commands, APIs,
+GUIs, constraints and so on. Even though it’s the same product, as far as the
+users in each case are concerned, what they need to know and do is very
+different - what they need is documentation not for <em>product</em>,
+but</p>
+<ul class="simple">
+<li><p><em>product-on-public-cloud-one</em></p></li>
+<li><p><em>product-on-public-cloud-two</em></p></li>
+<li><p>and so on…</p></li>
+</ul>
+<p>So, we <em>could</em> decide on an overall structure that does this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tutorial
+    for users on land
+        [...]
+    for users at sea
+        [...]
+    for users in the air
+        [...]
+[and then so on for how-to guides, reference and explanation]
+</pre></div>
+</div>
+<p>or maybe instead this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>for users on land
+    tutorial
+        [...]
+    how-to guides
+        [...]
+    reference
+        [...]
+    explanation
+        [...]
+for users at sea
+    [tutorial, how-to, reference, explanation sections]
+for users in the air
+    [tutorial, how-to, reference, explanation sections]
+</pre></div>
+</div>
+<p>Which is better? There seems to be a lot of repetition in either cases. What
+about the material that can be shared between land, sea and air?</p>
+<section id="what-is-the-problem">
+<h3>What <em>is</em> the problem?<a class="headerlink" href="#what-is-the-problem" title="Link to this heading">¶</a></h3>
+<p>Firstly, the problem is in no way limited to Diátaxis - there would be the
+difficulty of managing documentation in any case. However, Diátaxis certainly
+helps reveal the problem, as it does in many cases. It brings it into focus
+and demands that it be addressed.</p>
+<p>Secondly, the question highlights a common misunderstanding. Diátaxis is not a
+scheme into which documentation must be placed - four boxes. It posits four
+different kinds of documentation, around which documentation should be
+structured, but this does not mean that there must be simply four divisions
+of documentation in the hierarchy, one for each of those categories.</p>
+</section>
+</section>
+<section id="diataxis-as-an-approach">
+<h2>Diátaxis as an approach<a class="headerlink" href="#diataxis-as-an-approach" title="Link to this heading">¶</a></h2>
+<p>Diátaxis can be neatly represented in a diagram - but it is not
+the <em>same</em> as that diagram.</p>
+<p>It should be understood as an approach, a way of working with documentation,
+that identifies four different needs and uses them to author and structure
+documentation effectively.</p>
+<p>This will <em>tend</em> towards a clear, explicit, structural division into the four
+categories - but that is a typical outcome of the good practice, not its
+end.</p>
+</section>
+<section id="user-first-thinking">
+<h2>User-first thinking<a class="headerlink" href="#user-first-thinking" title="Link to this heading">¶</a></h2>
+<p><strong>Diátaxis is underpinned by attention to user needs</strong>, and once again it’s that
+concern that must direct us.</p>
+<p>What we must document is the product <em>as it is for the user</em>, the product as
+it is in their hands and minds. (Sadly for the creators of products, how they
+conceive them is much less relevant.)</p>
+<p>Is the product on land, sea and air effectively three different products,
+perhaps for three different users?</p>
+<p>In that case, let that be the starting point for thinking about it.</p>
+<p>If the documentation needs to meet the needs of users, developers and
+contributors, how do <em>they</em> see the product? Should we assume that a
+developer who incorporates it into other products will typically need a good
+understanding of how it’s used, and that a contributor needs to know what
+a developer knows too?</p>
+<p>Then perhaps it makes sense to be freer with the structure, in some parts
+(say, the tutorial) allowing the developer-facing content to follow on from
+the user-facing material, while completely separating the contributors’ how-to
+guides from both.</p>
+<p>And so on. If the structure is not <a class="reference internal" href="#basic-structure"><span class="std std-ref">the simple, uncomplicated structure we
+began with</span></a>, that’s not a problem - as long as there <em>is</em>
+arrangement according to Diátaxis principles, that documentation does not
+muddle up its different forms and purposes.</p>
+<section id="let-documentation-be-complex-if-necessary">
+<h3>Let documentation be complex if necessary<a class="headerlink" href="#let-documentation-be-complex-if-necessary" title="Link to this heading">¶</a></h3>
+<p>Documentation should be as complex as it needs to be. It will sometimes
+have complex structures.</p>
+<p>But, even complex structures can be made
+straightforward to navigate as long as they are logical and incorporate
+patterns that fit the needs of users.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  <div class="related-pages">
+    <a class="next-page" href="../colophon/">
+        <div class="page-info">
+          <div class="context">
+            <span>Next</span>
+          </div>
+          <div class="title">Colophon</div>
+        </div>
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      </a>
+    <a class="prev-page" href="../reference-explanation/">
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+        <div class="page-info">
+          <div class="context">
+            <span>Previous</span>
+          </div>
+          
+          <div class="title">The difference between reference and explanation</div>
+          
+        </div>
+      </a>
+  </div>
+  <div class="bottom-of-page">
+    <div class="left-details">
+      <div class="copyright">
+          Copyright &#169; Daniele Procida
+      </div>
+    </div>
+    <div class="right-details">
+      
+    </div>
+  </div>
+  
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Diátaxis in complex hierarchies</a><ul>
+<li><a class="reference internal" href="#structure-of-documentation-content">Structure of documentation content</a><ul>
+<li><a class="reference internal" href="#adding-a-layer-of-hierarchy">Adding a layer of hierarchy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contents-pages">Contents pages</a><ul>
+<li><a class="reference internal" href="#the-problem-of-lists">The problem of lists</a></li>
+<li><a class="reference internal" href="#overviews-and-introductory-text">Overviews and introductory text</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#two-dimensional-problems">Two-dimensional problems</a><ul>
+<li><a class="reference internal" href="#what-is-the-problem">What <em>is</em> the problem?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#diataxis-as-an-approach">Diátaxis as an approach</a></li>
+<li><a class="reference internal" href="#user-first-thinking">User-first thinking</a><ul>
+<li><a class="reference internal" href="#let-documentation-be-complex-if-necessary">Let documentation be complex if necessary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>

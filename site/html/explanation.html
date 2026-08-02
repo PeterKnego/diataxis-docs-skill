@@ -1,0 +1,426 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+  <meta name="author" content="Daniele Procida">
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="The compass" href="../compass/" /><link rel="prev" title="Reference" href="../reference/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.2.1 and Furo 2023.09.10 -->
+  
+        <title>Explanation - Diátaxis</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/diataxis.css?v=4400b9a8" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-background-secondary: #fff;
+  --color-sidebar-background-border: none;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+      }
+    }
+  }
+</style><script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="documentation-system" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/explanation/" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Diátaxis</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/diataxis-white-416.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Home</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start-here/">Start here</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../application/">Applying Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/">How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compass/">The compass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-use-diataxis/">Workflow</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/">Understanding Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../map/">The map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quality/">Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials-how-to/">Tutorials and how-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-explanation/">Reference and explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex-hierarchies/">Complex hierarchies</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colophon/">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/">Help translate Diátaxis</a></li>
+</ul>
+
+</div><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="explanation">
+<span id="id1"></span><h1>Explanation<a class="headerlink" href="#explanation" title="Link to this heading">¶</a></h1>
+<p class="rubric">Explanation is a discursive treatment of a subject, that permits <em>reflection</em>. Explanation is
+<strong>understanding-oriented</strong>.</p>
+<hr class="docutils" />
+<p>Explanation deepens and broadens the reader’s understanding of a subject. It brings clarity, light and context.</p>
+<img alt="Explanation - understanding oriented, theoretical knowledge, that serves our study" class="sidebar" src="../_images/overview-explanation.png" />
+<p>The concept of <em>reflection</em> is important. Reflection occurs <em>after</em> something else, and depends on something else, yet at the same time brings something new - shines a new light - on the subject matter.</p>
+<p>The perspective of explanation is higher and wider than that of the other three types. It does not take the user’s eye-level view, as in a how-to guide, or a close-up view of the machinery, like reference material. Its scope in each case is a topic - “an area of knowledge”, that somehow has to be bounded in a reasonable, meaningful way.</p>
+<p>For the user, explanation joins things together. It’s an answer to the question: <em>Can you tell me about …?</em></p>
+<p>It’s documentation that it makes sense to read while away from the product itself (one could say, explanation is the only kind of documentation that it might make sense to read in the bath).</p>
+<hr class="docutils" />
+<section id="the-value-and-place-of-explanation">
+<h2>The value and place of explanation<a class="headerlink" href="#the-value-and-place-of-explanation" title="Link to this heading">¶</a></h2>
+<section id="explanation-and-understanding">
+<h3>Explanation and understanding<a class="headerlink" href="#explanation-and-understanding" title="Link to this heading">¶</a></h3>
+<p>Explanation  is characterised by its distance from the active concerns of the practitioner. It doesn’t have direct implications for what they do, or for their work. This means that it’s sometimes seen as being of lesser importance. That’s a mistake; it may be less <em>urgent</em> than the other three, but it’s no less <em>important</em>. It’s not a luxury. No practitioner of a craft can afford to be without an
+understanding of that craft, and needs the explanatory material that will help weave it together.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Explanation by any other name</p>
+<p>Your explanation documentation doesn’t need to be called <em>Explanation</em>. Alternatives include:</p>
+<ul class="simple">
+<li><p><em>Discussion</em></p></li>
+<li><p><em>Background</em></p></li>
+<li><p><em>Conceptual guides</em></p></li>
+<li><p><em>Topics</em></p></li>
+</ul>
+</aside>
+<p>The word <em>explanation</em> - and its cognates in other languages - refer to <em>unfolding</em>, the revelation of what is hidden in the folds. So explanation brings to the light things that were implicit or obscured.</p>
+<p>Similarly, words that mean <em>understanding</em> share roots in words meaning to hold or grasp (as in <em>comprehend</em>). That’s an important part of understanding, to be able to hold something or be in possession of it. Understanding seals together the other components of our mastery of a craft, and makes it safely our own.</p>
+<p>Understanding doesn’t <em>come from</em> explanation, but explanation is required to form that web that helps hold
+everything together. Without it, the practitioner’s knowledge of their craft is loose and fragmented and fragile, and
+their exercise of it is <em>anxious</em>.</p>
+</section>
+<section id="explanation-and-its-boundaries">
+<h3>Explanation and its boundaries<a class="headerlink" href="#explanation-and-its-boundaries" title="Link to this heading">¶</a></h3>
+<p>Quite often explanation is not explicitly recognised in documentation; and the idea that things need to be
+explained is often only faintly expressed. Instead, explanation tends to be scattered in small parcels in other
+sections.</p>
+<p>It’s not always easy to write good explanatory material. Where does one start? It’s also not clear where to conclude.
+There is an open-endedness about it that can give the writer too many possibilities.</p>
+<p>Tutorials, how-to-guides and reference are all clearly defined in their scope by something that is also well-defined:
+by what you need the user to learn, what task the user needs to achieve, or just by the scope of the machine itself.</p>
+<p>In the case of explanation, it’s useful to have a real or imagined <em>why</em> question to serve as a prompt. Otherwise, you
+simply have to draw some lines that mark out a reasonable area and be satisfied with that.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="writing-good-explanation">
+<h2>Writing good explanation<a class="headerlink" href="#writing-good-explanation" title="Link to this heading">¶</a></h2>
+<section id="make-connections">
+<h3>Make connections<a class="headerlink" href="#make-connections" title="Link to this heading">¶</a></h3>
+<p>When writing explanation you are helping to weave a web of understanding for your readers. <strong>Make connections</strong> to
+other things, even to things outside the immediate topic, if that helps.</p>
+</section>
+<section id="provide-context">
+<h3>Provide context<a class="headerlink" href="#provide-context" title="Link to this heading">¶</a></h3>
+<p><strong>Provide background and context in your explanation</strong>: explain <em>why</em> things are so - design decisions, historical
+reasons, technical constraints - draw implications, mention specific examples.</p>
+</section>
+<section id="talk-about-the-subject">
+<h3>Talk <em>about</em> the subject<a class="headerlink" href="#talk-about-the-subject" title="Link to this heading">¶</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Things to discuss</p>
+<ul class="simple">
+<li><p>the bigger picture</p></li>
+<li><p>history</p></li>
+<li><p>choices, alternatives, possibilities</p></li>
+<li><p>why: reasons and justifications</p></li>
+</ul>
+</aside>
+<p>Explanation guides are <em>about</em> a topic in the sense that they are <em>around</em> it. Even the names of your explanation
+guides should reflect this; you should be able to place an implicit (or even explicit) <em>about</em> in front of each
+title. For example: <em>About user authentication</em>, or <em>About database connection policies</em>.</p>
+</section>
+<section id="admit-opinion-and-perspective">
+<h3>Admit opinion and perspective<a class="headerlink" href="#admit-opinion-and-perspective" title="Link to this heading">¶</a></h3>
+<p>Opinion might seem like a funny thing to introduce into documentation. The fact is that all human activity and knowledge is invested within opinion, with beliefs and thoughts. The reality of any human creation is rich with opinion, and that needs to be part of any understanding of it.</p>
+<p>Similarly, any understanding comes from a perspective, a particular stand-point - which means that other perspectives and stand-points exist. <strong>Explanation can and must consider alternatives</strong>, counter-examples or multiple different approaches to the same question.</p>
+<p>In explanation, you’re not giving instruction or describing facts - you’re opening up the topic for consideration. It helps to think of explanation as discussion: discussions can even consider and weigh up contrary <em>opinions</em>.</p>
+</section>
+<section id="keep-explanation-closely-bounded">
+<h3>Keep explanation closely bounded<a class="headerlink" href="#keep-explanation-closely-bounded" title="Link to this heading">¶</a></h3>
+<p>One risk of explanation is that it tends to absorb other things. The writer, intent on covering the topic, feels the urge to include instruction or technical description related to it. But documentation already has other places for these, and allowing them to creep in interferes with the explanation itself, and removes them from view in the correct place.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-language-of-explanation">
+<h2>The language of explanation<a class="headerlink" href="#the-language-of-explanation" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt><em>The reason for x is because historically, y …</em></dt><dd><p>Explain.</p>
+</dd>
+<dt><em>W is better than z, because …</em></dt><dd><p>Offer judgements and even opinions where appropriate..</p>
+</dd>
+<dt><em>An x in system y is analogous to a w in system z. However …</em></dt><dd><p>Provide context that helps the reader.</p>
+</dd>
+<dt><em>Some users prefer w (because z). This can be a good approach, but…</em></dt><dd><p>Weigh up alternatives.</p>
+</dd>
+<dt><em>An x interacts with a y as follows: …</em></dt><dd><p>Unfold the machinery’s internal secrets, to help understand why something does what it does.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="analogy-from-food-and-cooking">
+<h2>Analogy from food and cooking<a class="headerlink" href="#analogy-from-food-and-cooking" title="Link to this heading">¶</a></h2>
+<p>In 1984 <a class="reference external" href="https://www.curiouscook.com">Harold McGee</a> published <em>On food and cooking</em>.</p>
+<img alt="" class="floated" src="../_images/mcgee.jpg" />
+<p>The book doesn’t teach how to cook anything. It doesn’t contain recipes (except as historical examples) and it isn’t a work of reference. Instead, it places food and cooking in the context of history, society, science and technology. It explains for example why we do what we do in the kitchen and how that has changed.</p>
+<p>It’s clearly not a book we would read <em>while</em> cooking. We would read when we want to reflect on cooking. It illuminates the subject by taking multiple different perspectives on it, shining light from different angles.</p>
+<p>After reading a book like <em>On food and cooking</em>, our understanding is changed. Our knowledge is richer and deeper. What we have learned may or may not be immediately applicable next time we are doing something in the kitchen, but <em>it will change how
+we think about our craft, and will affect our practice</em>.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  <div class="related-pages">
+    <a class="next-page" href="../compass/">
+        <div class="page-info">
+          <div class="context">
+            <span>Next</span>
+          </div>
+          <div class="title">The compass</div>
+        </div>
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      </a>
+    <a class="prev-page" href="../reference/">
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+        <div class="page-info">
+          <div class="context">
+            <span>Previous</span>
+          </div>
+          
+          <div class="title">Reference</div>
+          
+        </div>
+      </a>
+  </div>
+  <div class="bottom-of-page">
+    <div class="left-details">
+      <div class="copyright">
+          Copyright &#169; Daniele Procida
+      </div>
+    </div>
+    <div class="right-details">
+      
+    </div>
+  </div>
+  
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Explanation</a><ul>
+<li><a class="reference internal" href="#the-value-and-place-of-explanation">The value and place of explanation</a><ul>
+<li><a class="reference internal" href="#explanation-and-understanding">Explanation and understanding</a></li>
+<li><a class="reference internal" href="#explanation-and-its-boundaries">Explanation and its boundaries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#writing-good-explanation">Writing good explanation</a><ul>
+<li><a class="reference internal" href="#make-connections">Make connections</a></li>
+<li><a class="reference internal" href="#provide-context">Provide context</a></li>
+<li><a class="reference internal" href="#talk-about-the-subject">Talk <em>about</em> the subject</a></li>
+<li><a class="reference internal" href="#admit-opinion-and-perspective">Admit opinion and perspective</a></li>
+<li><a class="reference internal" href="#keep-explanation-closely-bounded">Keep explanation closely bounded</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-language-of-explanation">The language of explanation</a></li>
+<li><a class="reference internal" href="#analogy-from-food-and-cooking">Analogy from food and cooking</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>

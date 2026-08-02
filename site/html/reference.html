@@ -1,0 +1,400 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+  <meta name="author" content="Daniele Procida">
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Explanation" href="../explanation/" /><link rel="prev" title="How-to guides" href="../how-to-guides/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.2.1 and Furo 2023.09.10 -->
+  
+        <title>Reference - Diátaxis</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/diataxis.css?v=4400b9a8" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-background-secondary: #fff;
+  --color-sidebar-background-border: none;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+      }
+    }
+  }
+</style><script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="documentation-system" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/reference/" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Diátaxis</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/diataxis-white-416.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Home</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start-here/">Start here</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../application/">Applying Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/">How-to guides</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explanation/">Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compass/">The compass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-use-diataxis/">Workflow</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/">Understanding Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../map/">The map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quality/">Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials-how-to/">Tutorials and how-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-explanation/">Reference and explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex-hierarchies/">Complex hierarchies</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colophon/">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/">Help translate Diátaxis</a></li>
+</ul>
+
+</div><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="reference">
+<span id="id1"></span><h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">¶</a></h1>
+<p class="rubric">Reference guides are <strong>technical descriptions</strong> of the machinery and how to operate it. Reference material is <strong>information-oriented</strong>.</p>
+<hr class="docutils" />
+<p>Reference material contains <em>propositional or theoretical</em> knowledge that a user looks to in their <em>work</em>.</p>
+<p>The only purpose of a reference guide is to describe, as succinctly as possible, and in an orderly
+way. Whereas the content of tutorials and how-to guides are led by needs of the user, reference
+material is led by the product it describes.</p>
+<img alt="Reference - information oriented, theoretical knowledge, that serves our work" class="sidebar" src="../_images/overview-reference.png" />
+<p>In the case of software, reference guides describe the software itself - APIs, classes, functions
+and so on - and how to use them.</p>
+<p>Your users need reference material because they need truth and certainty - firm platforms on which to stand while
+they work. Good technical reference is essential to provide users with the confidence to do their work.</p>
+<hr class="docutils" />
+<section id="reference-as-description">
+<h2>Reference as description<a class="headerlink" href="#reference-as-description" title="Link to this heading">¶</a></h2>
+<p>Reference material describes the machinery. It should be <strong>austere</strong>. One hardly <em>reads</em> reference material;
+one <em>consults</em> it.</p>
+<p>There should be no doubt or ambiguity in reference; it should be wholly authoritative.</p>
+<p>Reference material is like a map. A map tells you what you need to know about the territory,
+without having to go out and check the territory for yourself; a reference guide serves the same
+purpose for the product and its internal machinery.</p>
+<p>Although reference should not attempt to show how to perform tasks, it can and often needs to
+include a description of how something works or the correct way to use it.</p>
+<aside class="sidebar">
+<p>Unfortunately, too many software developers think that auto-generated reference material is all the
+documentation required.</p>
+</aside>
+<p>Some reference material (such as API documentation) can be generated automatically by the software
+it describes, which is a powerful way of ensuring that it remains faithfully accurate to the code.</p>
+</section>
+<hr class="docutils" />
+<section id="key-principles">
+<h2>Key principles<a class="headerlink" href="#key-principles" title="Link to this heading">¶</a></h2>
+<section id="describe-and-only-describe">
+<h3>Describe and only describe<a class="headerlink" href="#describe-and-only-describe" title="Link to this heading">¶</a></h3>
+<p><em>Neutral description</em> is the key imperative of technical reference.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Style and form</p>
+<ul class="simple">
+<li><p>austere and uncompromising</p></li>
+<li><p>neutrality, objectivity, factuality</p></li>
+<li><p>structured according to the structure of the machinery itself</p></li>
+</ul>
+</aside>
+<p>Unfortunately one of the hardest things to do is to describe something neutrally. It’s not a natural way of communicating. What’s natural on the other hand is to explain, instruct, discuss, opine, and all these things run counter to the needs of technical reference, which instead demands accuracy, precision, completeness and clarity.</p>
+<p>It can be tempting to introduce instruction and explanation, simply because description can seem too inadequate to be useful, and because we do indeed need these other things. Instead, link to how-to guides, explanation and introductory tutorials.</p>
+</section>
+<section id="adopt-standard-patterns">
+<h3>Adopt standard patterns<a class="headerlink" href="#adopt-standard-patterns" title="Link to this heading">¶</a></h3>
+<p><strong>Reference material is useful when it is consistent.</strong> Standard patterns are what allow us to use reference material effectively. Your job is to place the material that your user needs where they expect to find it, in a format that they are familiar with.</p>
+<p>There are many opportunities in writing to delight your readers with your extensive vocabulary and command of multiple styles, but reference material is definitely not one of them.</p>
+</section>
+<section id="respect-the-structure-of-the-machinery">
+<span id="respect-structure"></span><h3>Respect the structure of the machinery<a class="headerlink" href="#respect-the-structure-of-the-machinery" title="Link to this heading">¶</a></h3>
+<p>The way a map corresponds to the territory it represents helps us use the former to find our way
+through the latter. It should be the same with documentation: <strong>the structure of the documentation
+should mirror the structure of the product</strong>, so that the user can work their way through them
+at the same time.</p>
+<p>It doesn’t mean forcing the documentation into an unnatural structure. What’s important is that the
+logical, conceptual arrangement of and relations within the code should help make sense of the
+documentation.</p>
+</section>
+<section id="provide-examples">
+<h3>Provide examples<a class="headerlink" href="#provide-examples" title="Link to this heading">¶</a></h3>
+<p><strong>Examples</strong> are valuable ways of providing illustration that helps readers understand reference, while avoiding the risk of becoming distracted from the job of describing. For example, an example of usage of a command can be a succinct way of illustrating it and its context, without falling into the trap of trying to explain or instruct.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-language-of-reference-guides">
+<h2>The language of reference guides<a class="headerlink" href="#the-language-of-reference-guides" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>Django’s default logging configuration inherits Python’s defaults. It’s available as <code class="docutils literal notranslate"><span class="pre">django.utils.log.DEFAULT_LOGGING</span></code> and defined in <code class="docutils literal notranslate"><span class="pre">django/utils/log.py</span></code></dt><dd><p>State facts about the machinery and its behaviour.</p>
+</dd>
+<dt>Sub-commands are: a, b, c, d, e, f.</dt><dd><p>List commands, options, operations, features, flags, limitations, error messages, etc.</p>
+</dd>
+<dt>You must use a. You must not apply b unless c. Never d.</dt><dd><p>Provide warnings where appropriate.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="applied-to-food-and-cooking">
+<h2>Applied to food and cooking<a class="headerlink" href="#applied-to-food-and-cooking" title="Link to this heading">¶</a></h2>
+<p>You might check the information on a packet of food, in order to help you make a decision about what to do.</p>
+<p>When you’re looking for information - relevant facts - you do not want to be confronted by opinions, speculation, instructions or interpretation.</p>
+<img alt="Information on the back of a packet of lasagne" class="floated" src="../_images/lasagne.jpg" />
+<p>You also expect that information to be presented in standard ways, so that you - when you need to know about something’s nutritional properties, how it should be stored, its ingredients, what health implications it might have - can find them quickly, and know you can rely on them.</p>
+<p>So you expect to see for example: <em>May contain traces of wheat</em>. Or: <em>Net weight: 1000g</em>.</p>
+<p>You will certainly not expect to find for example recipes or marketing claims mixed up with this information; that could be literally dangerous.</p>
+<p>The way reference material is presented on food products is so important that it’s usually governed by law, and the same kind of seriousness should apply to all reference documentation.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  <div class="related-pages">
+    <a class="next-page" href="../explanation/">
+        <div class="page-info">
+          <div class="context">
+            <span>Next</span>
+          </div>
+          <div class="title">Explanation</div>
+        </div>
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      </a>
+    <a class="prev-page" href="../how-to-guides/">
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+        <div class="page-info">
+          <div class="context">
+            <span>Previous</span>
+          </div>
+          
+          <div class="title">How-to guides</div>
+          
+        </div>
+      </a>
+  </div>
+  <div class="bottom-of-page">
+    <div class="left-details">
+      <div class="copyright">
+          Copyright &#169; Daniele Procida
+      </div>
+    </div>
+    <div class="right-details">
+      
+    </div>
+  </div>
+  
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Reference</a><ul>
+<li><a class="reference internal" href="#reference-as-description">Reference as description</a></li>
+<li><a class="reference internal" href="#key-principles">Key principles</a><ul>
+<li><a class="reference internal" href="#describe-and-only-describe">Describe and only describe</a></li>
+<li><a class="reference internal" href="#adopt-standard-patterns">Adopt standard patterns</a></li>
+<li><a class="reference internal" href="#respect-the-structure-of-the-machinery">Respect the structure of the machinery</a></li>
+<li><a class="reference internal" href="#provide-examples">Provide examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-language-of-reference-guides">The language of reference guides</a></li>
+<li><a class="reference internal" href="#applied-to-food-and-cooking">Applied to food and cooking</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>

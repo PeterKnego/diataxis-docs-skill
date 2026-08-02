@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+  <meta name="author" content="Daniele Procida">
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Reference" href="../reference/" /><link rel="prev" title="Tutorials" href="../tutorials/" />
+
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.2.1 and Furo 2023.09.10 -->
+  
+        <title>How-to guides - Diátaxis</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/diataxis.css?v=4400b9a8" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-background-secondary: #fff;
+  --color-sidebar-background-border: none;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-secondary: #000;
+  
+      }
+    }
+  }
+</style><script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="documentation-system" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/how-to-guides/" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Diátaxis</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/diataxis-white-416.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Home</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start-here/">Start here</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../application/">Applying Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explanation/">Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compass/">The compass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-use-diataxis/">Workflow</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/">Understanding Diátaxis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../map/">The map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quality/">Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials-how-to/">Tutorials and how-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-explanation/">Reference and explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex-hierarchies/">Complex hierarchies</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colophon/">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/">Help translate Diátaxis</a></li>
+</ul>
+
+</div><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="how-to-guides">
+<span id="how-to"></span><h1>How-to guides<a class="headerlink" href="#how-to-guides" title="Link to this heading">¶</a></h1>
+<p class="rubric">How-to guides are <strong>directions</strong> that guide the reader through a problem or towards a result. How-to guides are <strong>goal-oriented</strong>.</p>
+<hr class="docutils" />
+<p>A how-to guide helps the user get something done, correctly and safely; it guides the user’s <em>action</em>.</p>
+<p>It’s concerned with <em>work</em> - navigating from one side to the other of a real-world problem-field.</p>
+<img alt="How-to guides - task oriented, practical steps, that serve our work" class="sidebar" src="../_images/overview-how-to.png" />
+<p>Examples could be: <em>how to calibrate the radar array</em>; <em>how to use fixtures in pytest</em>; <em>how to configure
+reconnection back-off policies</em>. On the other hand, <em>how to build a web application</em> is not - that’s not
+addressing a specific goal or problem, it’s a vastly open-ended sphere of skill.</p>
+<p>How-to guides matter not just because users need to be able to accomplish things: the list of how-to guides in your
+documentation helps frame the picture of what your product can actually <em>do</em>. A rich list of how-to guides is an
+encouraging suggestion of a product’s capabilities.</p>
+<p>Well-written how-to guides that address the right questions are likely to be the most-read sections of your documentation.</p>
+<hr class="docutils" />
+<section id="how-to-guides-addressed-to-problems">
+<h2>How-to guides addressed to problems<a class="headerlink" href="#how-to-guides-addressed-to-problems" title="Link to this heading">¶</a></h2>
+<p><strong>How-to guides must be written from the perspective of the user, not of the machinery.</strong> A how-to guide represents something that someone needs to get done. It’s defined in other words by the needs of a user. Every how-to guide should answer to a human project, in other words. It should show what the human needs to do, with the tools at hand, to obtain the result they need.</p>
+<p>This is in strong contrast to common pattern for how-to guides that often prevails, in which how-to guides are defined by operations that can be performed with a tool or system. The problem with this latter pattern is that it offers little value to the user; it is not addressed to any need the user has. Instead, it’s focused on the tool, on taking the machinery through its motions.</p>
+<p>This is fundamentally a distinction of <em>meaningfulness</em>. Meaning is given by purpose and need. There is no purpose or need in the functionality of a machine. It is merely a series of causes and effects, inputs and outputs.</p>
+<p>Consider:</p>
+<ul class="simple">
+<li><p>“To shut off the flow of water, turn the tap clockwise.”</p></li>
+<li><p>“To deploy the desired database configuration, select the appropriate options and press <strong>Deploy</strong>.”</p></li>
+</ul>
+<aside class="sidebar">
+<p>We really do not need to be informed that we turn on a device using the power switch, but it is shocking how often how-to guides in software documentation are written at this level.</p>
+</aside>
+<p>The examples above <em>look</em> like examples of guidance, but they are not.</p>
+<p>They represent mostly useless information that anyone with basic competence - anyone who is working in this domain - should be expected to know. Between them, standardised interfaces and generally-expected knowledge should make it quite clear what effect most actions will have.</p>
+<p>Secondly, they are disconnected from purpose. What the user needs to know might be things like:</p>
+<ul class="simple">
+<li><p>how much water to run, and how vigorously to run it, for a certain purpose</p></li>
+<li><p>what database configuration options align with particular real-world needs</p></li>
+</ul>
+<aside class="sidebar">
+<p>How-to guides are about goals, projects and problems, not about tools.</p>
+</aside>
+<p>Tools appear in how-to guides as incidental bit-players, the means to the user’s end. Sometimes of course, a particular end is closely aligned with a particular tool or part of the system, and then you will find that a how-to guide indeed concentrates on that. Just as often, a how-to guide will cut across different tools or parts of a system, joining them up together in a series of activities defined by something a human being needs to get done. In either case, it is that project that defines what a how-to guide must cover.</p>
+</section>
+<hr class="docutils" />
+<section id="what-how-to-guides-are-not">
+<h2>What how-to guides are not<a class="headerlink" href="#what-how-to-guides-are-not" title="Link to this heading">¶</a></h2>
+<p><strong>How-to guides are wholly distinct from tutorials</strong>. They are often confused, but the user needs that they serve are quite different. Conflating them is at the root of many difficulties that afflict documentation. See <a class="reference internal" href="../tutorials-how-to/#tutorials-how-to"><span class="std std-ref">The difference between a tutorial and how-to guide</span></a> for a discussion of this distinction.</p>
+<p>In another confusion, how-to guides are often construed merely as procedural guides. But solving a problem or accomplishing a task cannot always be reduced to a procedure. Real-world problems do not always offer themselves up to linear solutions. The sequences of action in a how-to guide sometimes need to fork and overlap, and they have multiple entry and exit-points. Often, a how-to guide will need the user to rely on their judgement in applying the guidance it can provide.</p>
+</section>
+<hr class="docutils" />
+<section id="key-principles">
+<h2>Key principles<a class="headerlink" href="#key-principles" title="Link to this heading">¶</a></h2>
+<p>A how to-guide is concerned with work - a task or problem, with a practical goal. <em>Maintain focus on that goal</em>.</p>
+<aside class="sidebar">
+<p class="sidebar-title">How-to characteristics</p>
+<ul class="simple">
+<li><p>focused on tasks or problems</p></li>
+<li><p>assume the user knows what they want to achieve</p></li>
+<li><p>action and only action</p></li>
+<li><p>no digression, explanation, teaching</p></li>
+</ul>
+</aside>
+<p>Anything else that’s added distracts both you and the user and dilutes the useful power of the guide. Typically, the temptations are to explain or to provide reference for completeness. Neither of these are part of guiding the user in their work. They get in the way of the action; if they’re important, link to them.</p>
+<p>A how-to guide serves the work of the already-competent user, whom you can assume to know what they want to do, and to be able to follow your instructions correctly.</p>
+<section id="address-real-world-complexity">
+<h3>Address real-world complexity<a class="headerlink" href="#address-real-world-complexity" title="Link to this heading">¶</a></h3>
+<p><strong>A how-to guide needs to be adaptable to real-world use-cases</strong>. One that is useless for any purpose except <em>exactly</em> the narrow one you have addressed is rarely valuable. You can’t address every possible case, so you must find ways to remain open to the range of possibilities, in such a way that the user can adapt your guidance to their needs.</p>
+</section>
+<section id="omit-the-unnecessary">
+<h3>Omit the unnecessary<a class="headerlink" href="#omit-the-unnecessary" title="Link to this heading">¶</a></h3>
+<p>In how-to guides, <strong>practical usability is more helpful than completeness.</strong> Whereas a tutorial needs to be a complete,
+end-to-end guide, a how-to guide does not. It should start and end in some reasonable, meaningful place, and require
+the reader to join it up to their own work.</p>
+</section>
+<section id="provide-a-set-of-instructions">
+<h3>Provide a set of instructions<a class="headerlink" href="#provide-a-set-of-instructions" title="Link to this heading">¶</a></h3>
+<p>A how-to guide describes an <em>executable solution</em> to a real-world problem or task. It’s in the form of a contract: if you’re facing this situation, then you can work your way through it by taking the steps outlined in this approach. The steps are in the form of <em>actions</em>.</p>
+<p>“Actions” in this context includes physical acts, but also thinking and judgement - solving a problem involves thinking it through. A how-to guide should address how the user thinks as well as what the user does.</p>
+</section>
+<section id="describe-a-logical-sequence">
+<h3>Describe a logical sequence<a class="headerlink" href="#describe-a-logical-sequence" title="Link to this heading">¶</a></h3>
+<p>The fundamental structure of a how-to guide is a <em>sequence</em>. It implies logical ordering in time, that there is a sense and meaning to this particular order.</p>
+<p>In many cases, the ordering is simply imposed by the way things must be (step two requires completion of step one, for example). In this case it’s obvious what order your directions should take.</p>
+<p>Sometimes the need is more subtle - it might be possible to <em>perform</em> two operations in either order, but if for example one operation helps set up the user’s working environment or even their thinking in a way that benefits the other, that’s a good reason for putting it first.</p>
+</section>
+<section id="seek-flow">
+<h3>Seek flow<a class="headerlink" href="#seek-flow" title="Link to this heading">¶</a></h3>
+<p>At all times, try to ground your sequences in the patterns of the <em>user’s</em> activities and thinking, in such a way that the guide acquires <em>flow</em>: smooth progress.</p>
+<p>Achieving flow means successfully understanding the user. Paying attention to sense and meaning in ordering requires paying attention to the way human beings think and act, and the needs of someone following directions.</p>
+<p>Again, this can be somewhat obvious: a workflow that has the user repeatedly switching between contexts and tools is clearly clumsy and inefficient. But you should look more deeply than this. What are you asking the user to think about, and how will their thinking flow from subject to subject during their work? How long do you require the user to hold thoughts open before they can be resolved in action? If you require the user to jump back to earlier concerns, is this necessary or avoidable?</p>
+<p>A how-to guide is concerned not just with logical ordering in time, but action taking place in time. Action, and a guide to it, has pace and rhythm. Badly-judged pace or disrupted rhythm are both damaging to flow.</p>
+<p>At its best, how-to documentation gives the user flow. There is a distinct experience of encountering a guide that appears to <em>anticipate</em> the user - the documentation equivalent of a helper who has the tool you were about to reach for, ready to place it in your hand.</p>
+</section>
+<section id="pay-attention-to-naming">
+<h3>Pay attention to naming<a class="headerlink" href="#pay-attention-to-naming" title="Link to this heading">¶</a></h3>
+<p><strong>Choose titles that say exactly what a how-to guide shows.</strong></p>
+<ul class="simple">
+<li><p>good: <em>How to integrate application performance monitoring</em></p></li>
+<li><p>bad: <em>Integrating application performance monitoring</em> (maybe the document is about how to decide whether you should, not about how to do it)</p></li>
+<li><p>very bad: <em>Application performance monitoring</em> (maybe it’s about <em>how</em> - but maybe it’s about <em>whether</em>, or even just an explanation of <em>what</em> it is)</p></li>
+</ul>
+<p>Note that search engines appreciate good titles just as much as humans do.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-language-of-how-to-guides">
+<h2>The language of how-to guides<a class="headerlink" href="#the-language-of-how-to-guides" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt><em>This guide shows you how to…</em></dt><dd><p>Describe clearly the problem or task that the guide shows the user how to solve.</p>
+</dd>
+<dt><em>If you want x, do y. To achieve w, do z.</em></dt><dd><p>Use conditional imperatives.</p>
+</dd>
+<dt><em>Refer to the x reference guide for a full list of options.</em></dt><dd><p>Don’t pollute your practical how-to guide with every possible thing the user might do related to x.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="applied-to-food-and-cooking">
+<h2>Applied to food and cooking<a class="headerlink" href="#applied-to-food-and-cooking" title="Link to this heading">¶</a></h2>
+<p>Consider a recipe, an excellent model for a how-to guide. A recipe clearly defines what will be achieved by following it, and <strong>addresses a specific question</strong> (<em>How do I make…?</em> or <em>What can I make with…?</em>).</p>
+<img alt="A recipe contains a list of ingredients and a list of steps." src="../_images/old-recipe.jpg" />
+<p>It’s not the responsibility of a recipe to <em>teach</em> you how to make something. A professional chef who has made exactly the same thing multiple times before may still follow a recipe - even if they <em>created</em> the recipe themselves - to ensure that they do it correctly.</p>
+<p>Even following a recipe <strong>requires at least basic competence</strong>. Someone who has never cooked before should not be expected to follow a recipe with success, so a recipe is not a substitute for a cooking lesson.</p>
+<p>Someone who expected to be provided with a recipe, and is given instead a cooking lesson, will be disappointed and annoyed. Similarly, while it’s interesting to read about the context or history of a particular dish, the one time you don’t want to be faced with that is while you are in the middle of trying to make it. A good recipe follows a well-established format, that excludes both teaching and discussion, and focuses only on <strong>how</strong> to make the dish concerned.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  <div class="related-pages">
+    <a class="next-page" href="../reference/">
+        <div class="page-info">
+          <div class="context">
+            <span>Next</span>
+          </div>
+          <div class="title">Reference</div>
+        </div>
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      </a>
+    <a class="prev-page" href="../tutorials/">
+        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+        <div class="page-info">
+          <div class="context">
+            <span>Previous</span>
+          </div>
+          
+          <div class="title">Tutorials</div>
+          
+        </div>
+      </a>
+  </div>
+  <div class="bottom-of-page">
+    <div class="left-details">
+      <div class="copyright">
+          Copyright &#169; Daniele Procida
+      </div>
+    </div>
+    <div class="right-details">
+      
+    </div>
+  </div>
+  
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">How-to guides</a><ul>
+<li><a class="reference internal" href="#how-to-guides-addressed-to-problems">How-to guides addressed to problems</a></li>
+<li><a class="reference internal" href="#what-how-to-guides-are-not">What how-to guides are not</a></li>
+<li><a class="reference internal" href="#key-principles">Key principles</a><ul>
+<li><a class="reference internal" href="#address-real-world-complexity">Address real-world complexity</a></li>
+<li><a class="reference internal" href="#omit-the-unnecessary">Omit the unnecessary</a></li>
+<li><a class="reference internal" href="#provide-a-set-of-instructions">Provide a set of instructions</a></li>
+<li><a class="reference internal" href="#describe-a-logical-sequence">Describe a logical sequence</a></li>
+<li><a class="reference internal" href="#seek-flow">Seek flow</a></li>
+<li><a class="reference internal" href="#pay-attention-to-naming">Pay attention to naming</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-language-of-how-to-guides">The language of how-to guides</a></li>
+<li><a class="reference internal" href="#applied-to-food-and-cooking">Applied to food and cooking</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>
