@@ -233,3 +233,8 @@ The full diataxis.fr corpus (18 pages) is committed under `site/txt/` as text
 extracted from the published pages, retrieved 2026-08-02. The reference sheets
 are distilled from this corpus, so the skill's rules can be traced back to their
 source and re-derived if the site changes.
+
+The corpus is © Daniele Procida, licensed CC BY-SA 4.0 (see README). The
+skill's `references/` sheets are adaptations of it, so under the ShareAlike
+condition they must carry the same attribution header and license as the
+`site/txt/` files.
