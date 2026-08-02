@@ -1,0 +1,20 @@
+{
+  "name": "diataxis-docs-skill",
+  "owner": {
+    "name": "Peter Knego",
+    "email": "peter@knego.net"
+  },
+  "description": "Diátaxis documentation generation for Claude Code",
+  "plugins": [
+    {
+      "name": "diataxis-docs",
+      "source": "./",
+      "description": "Generate a complete Diátaxis documentation set (tutorials, how-to guides, reference, explanation) from a codebase, as a gated, phased workflow.",
+      "author": {
+        "name": "Peter Knego"
+      },
+      "homepage": "https://github.com/PeterKnego/diataxis-docs-skill",
+      "license": "MIT AND CC-BY-SA-4.0"
+    }
+  ]
+}
