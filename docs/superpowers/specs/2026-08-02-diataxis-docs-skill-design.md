@@ -105,8 +105,8 @@ Inventory existing documentation and classify each piece with the compass.
 
 ### Phase 1 — Plan and gap confirmation
 
-Write `diataxis-plan.md` outside the published docs tree (repo root, or the
-scratchpad if the user prefers no artifact) so site generators never render it.
+Write `diataxis-plan.md` at the repo root, outside any published docs tree,
+so site generators never render it.
 It contains, for every proposed document: its title, the user need it serves,
 and the source material backing it. Existing docs are annotated
 keep / move / split.

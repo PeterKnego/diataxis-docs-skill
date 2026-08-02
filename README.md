@@ -20,10 +20,11 @@ A Claude Code skill that generates a Diátaxis-shaped documentation set
 This repository contains material under two licenses:
 
 - **Original work** — the skill design, specs, and everything outside
-  `site/txt/` — is copyright © Peter Knego and licensed under the
-  [MIT License](LICENSE).
-- **Diátaxis source material** — everything under [site/txt/](site/txt/) — is
-  copyright © Daniele Procida and licensed under
+  `site/txt/` and `skill/references/` — is copyright © Peter Knego and
+  licensed under the [MIT License](LICENSE).
+- **Diátaxis source material** — everything under [site/txt/](site/txt/), and
+  the six rule sheets under [skill/references/](skill/references/), which are
+  CC BY-SA 4.0 adaptations — is copyright © Daniele Procida and licensed under
   [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as detailed
   below.
 

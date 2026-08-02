@@ -29,7 +29,7 @@ an orderly way. It is led by the product it describes, not by the user.
 
 ## Forbidden
 
-Each of these has a home elsewhere — redirect to it instead of writing it here:
+Where one of these has a home elsewhere, redirect to it instead of writing it here:
 
 - **Instruction** ("to do X, …") — link to the how-to guide instead.
 - **Explanation** (any *why*) — link to the explanation instead.
