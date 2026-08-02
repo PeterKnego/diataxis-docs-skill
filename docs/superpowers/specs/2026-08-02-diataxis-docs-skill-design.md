@@ -45,6 +45,18 @@ cannot populate.
 | Existing docs | Absorb and reclassify — preserve human-written prose |
 | Packaging | Personal skill at `~/.claude/skills/diataxis-docs/` with bundled reference sheets |
 | Output format | Match detected docs tooling; fall back to Markdown under `docs/` |
+| Invocation | Explicit only — `/diataxis-docs` or asking for the skill by name |
+
+## Invocation
+
+The skill triggers only on explicit invocation: `/diataxis-docs`, or the user
+naming it ("use the diataxis skill on this repo"). Its frontmatter description
+states this restriction so it does not auto-fire on incidental documentation
+requests ("add a note to the README" must never launch a seven-phase workflow).
+
+A full run executes all phases. The user may also invoke a single quadrant
+("`/diataxis-docs` reference only"); the skill still performs Phase 0 and a
+scoped Phase 1 plan for that quadrant, then writes only it.
 
 ## Structure
 
@@ -67,8 +79,15 @@ tutorial pedagogy in context.
 
 ### Phase 0 — Survey (read-only)
 
+Verify the repo is under version control with a clean working tree; if not,
+stop and offer `git init` / commit first. Later phases move and split
+human-written files, and every such change must be revertable.
+
 Detect docs tooling (`mkdocs.yml`, `conf.py`, `docusaurus.config.*`, bare
-`docs/`) to fix the output format and location.
+`docs/`) to fix the output format and location. Also detect API-reference
+generators (Sphinx autodoc, typedoc, godoc, rustdoc and similar): where one
+exists, the reference phase improves the docstrings and structure that feed it
+rather than writing parallel pages that would drift from the generated output.
 
 Map the product surface: entry points, public exports, CLI commands, config
 options, module structure.
@@ -86,10 +105,16 @@ Inventory existing documentation and classify each piece with the compass.
 
 ### Phase 1 — Plan and gap confirmation
 
-Write `diataxis-plan.md` at the root of the detected docs directory, containing,
-for every proposed document: its
-title, the user need it serves, and the source material backing it. Existing
-docs are annotated keep / move / split.
+Write `diataxis-plan.md` outside the published docs tree (repo root, or the
+scratchpad if the user prefers no artifact) so site generators never render it.
+It contains, for every proposed document: its title, the user need it serves,
+and the source material backing it. Existing docs are annotated
+keep / move / split.
+
+The plan also proposes the reference **scope** as its own approvable item —
+e.g. public API only, or the top-level modules — since "document the product
+surface" is unbounded on a large codebase. The user approves scope, not just
+the document list.
 
 Then ask the user one batched round of questions covering only what the repo
 cannot answer:
@@ -100,8 +125,9 @@ cannot answer:
 
 The user approves the plan before any documentation is written.
 
-A quadrant with no genuine material stays empty, and the plan says so. No
-scaffolds.
+A quadrant with no genuine material is not created at all — no directory, no
+landing page — and the plan says so. An empty section is itself the forbidden
+scaffold.
 
 ### Phases 2–5 — Write, one quadrant at a time
 
@@ -113,7 +139,9 @@ it is the most expensive to produce and can only be constructed once the writer
 knows what reference and how-to material exists to link out to.
 
 Each quadrant is written with its rule sheet loaded, and runs a compass
-self-check before closing.
+self-check before closing. Content that belongs in a quadrant not yet written
+(e.g. explanation surfacing during the reference phase) is parked in the plan
+file and picked up when its phase arrives.
 
 ### Phase 6 — Assemble structure
 
@@ -172,8 +200,16 @@ single clause.
 **Tutorials are verified by execution.** Where the environment allows, the skill
 runs each command and captures real output rather than asserting that it works.
 Diátaxis demands perfect reliability of tutorials, and execution is the only
-honest basis for that claim. Where commands cannot be run, the skill states this
-in the plan rather than implying verification it did not perform.
+honest basis for that claim.
+
+Execution is sandboxed: commands run in a disposable copy of the repo (git
+worktree or temp directory), never in the user's working tree. Commands with
+external side effects — deploys, pushes, migrations against real databases,
+anything touching remote services — are never run; those steps, and any
+environment where execution is impossible, are explicitly marked unverified in
+the plan rather than implying verification that did not happen. Captured output
+is normalized (paths, timestamps, hostnames) before being shown as expected
+output.
 
 ## Guards
 
