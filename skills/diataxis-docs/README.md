@@ -8,41 +8,23 @@ sheet, then assemble the four quadrants into a linked structure.
 
 ## Install
 
-As a plugin (recommended — gets you updates via the plugin manager). In
-Claude Code:
+In Claude Code:
 
 ```
 /plugin marketplace add PeterKnego/diataxis-docs-skill
 /plugin install diataxis-docs@diataxis-docs-skill
 ```
 
-Update later with `/plugin marketplace update diataxis-docs-skill`.
-
-Or as a bare personal skill — from a clone of the repository root:
-
-```bash
-ln -s "$(pwd)/skills/diataxis-docs" ~/.claude/skills/diataxis-docs
-```
-
-Update by pulling the clone.
+For updates, the clone-based install, and verification, see
+[How to install and update the skill](https://github.com/PeterKnego/diataxis-docs-skill/blob/main/docs/how-to/install-and-update.md).
 
 ## Usage
 
-Invoke explicitly — the skill never self-triggers:
-
-```
-/diataxis-docs
-```
-
-Runs the full workflow across all four quadrants.
-
-```
-/diataxis-docs reference only
-```
-
-Scopes the run to a single quadrant (e.g. `reference`, `how-to`,
-`explanation`, `tutorial`). Survey and planning still happen first, but only
-the requested quadrant is written.
+Invoke explicitly — the skill never self-triggers. `/diataxis-docs` runs the
+full workflow; `/diataxis-docs reference only` scopes the run to a single
+quadrant. For the full walkthrough — preparing the repo, the approval gate,
+reruns — see
+[How to generate documentation for a repository](https://github.com/PeterKnego/diataxis-docs-skill/blob/main/docs/how-to/run-on-a-repo.md).
 
 See [SKILL.md](SKILL.md) for the full phase-by-phase workflow and
 [references/](references/) for the per-quadrant rule sheets.

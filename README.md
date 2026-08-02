@@ -6,6 +6,8 @@ A Claude Code skill that generates a Diátaxis-shaped documentation set
 - Design spec: [docs/superpowers/specs/2026-08-02-diataxis-docs-skill-design.md](docs/superpowers/specs/2026-08-02-diataxis-docs-skill-design.md)
 - Source corpus: [site/txt/](site/txt/) — the pages of diataxis.fr as extracted
   text, kept as provenance so the skill's rules can be traced to their source.
+- Documentation: [docs/](docs/index.md) — how to install, how to run it on
+  a repository, the plan-file reference, and the design rationale.
 - Skill: [skills/diataxis-docs/](skills/diataxis-docs/) — the installable
   skill itself. The repo is a Claude Code plugin marketplace; install in
   Claude Code with:
@@ -15,14 +17,8 @@ A Claude Code skill that generates a Diátaxis-shaped documentation set
   /plugin install diataxis-docs@diataxis-docs-skill
   ```
 
-  Or install as a bare personal skill from a clone:
-
-  ```bash
-  ln -s "$(pwd)/skills/diataxis-docs" ~/.claude/skills/diataxis-docs
-  ```
-
-  See [skills/diataxis-docs/README.md](skills/diataxis-docs/README.md) for
-  usage and updates.
+  For updates, the clone-based install, and verification, see
+  [How to install and update the skill](docs/how-to/install-and-update.md).
 
 ## Licensing
 
