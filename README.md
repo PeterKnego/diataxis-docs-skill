@@ -29,35 +29,26 @@ Full documentation lives at [docs/](docs/index.md):
 - [Explanation](docs/explanation/design.md) — why the skill is gated,
   ordered, and licensed the way it is.
 
-## Licensing
+## Licensing and attribution
 
 This repository contains material under two licenses:
 
 - **Original work** — the skill design, specs, and everything outside
-  `site/txt/` and `skills/diataxis-docs/references/` — is copyright © Peter Knego and
-  licensed under the [MIT License](LICENSE).
-- **Diátaxis source material** — everything under [site/txt/](site/txt/), and
-  the six rule sheets under [skills/diataxis-docs/references/](skills/diataxis-docs/references/), which are
-  CC BY-SA 4.0 adaptations — is copyright © Daniele Procida and licensed under
-  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as detailed
-  below.
+  `site/txt/` and `skills/diataxis-docs/references/` — is copyright
+  © Peter Knego and licensed under the [MIT License](LICENSE).
+- **Diátaxis material** — the extracted pages under [site/txt/](site/txt/)
+  and the rule sheets adapted from them under
+  [skills/diataxis-docs/references/](skills/diataxis-docs/references/) — is
+  copyright © Daniele Procida and licensed under
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as stated
+  in the website's
+  [source repository](https://github.com/evildmp/diataxis-documentation-framework).
 
-## Attribution for the Diátaxis material
+Changes made to the Diátaxis material: extracted from the published
+[diataxis.fr](https://diataxis.fr) pages on 2026-08-02, converted to
+Markdown (formatting, navigation and images removed), and distilled into
+rule-sheet form for the skill. Each file carries an attribution header
+naming its exact source pages.
 
-The files under [site/txt/](site/txt/) are extracted from
-[diataxis.fr](https://diataxis.fr). The license of the original material is
-stated in the
-[source repository](https://github.com/evildmp/diataxis-documentation-framework)
-for the website.
-
-Changes made: the text was extracted from the published HTML pages on
-2026-08-02 and converted to Markdown; site formatting, navigation and images
-were removed. Each file carries its own attribution header naming the exact
-source page.
-
-In accordance with the ShareAlike condition, the contents of `site/txt/` — and
-any material in this repository derived from them, such as distilled rule
-sheets — are likewise distributed under CC BY-SA 4.0.
-
-To cite Diátaxis itself, refer to [diataxis.fr](https://diataxis.fr), per its
-[colophon](https://diataxis.fr/colophon/).
+To cite Diátaxis itself, refer to [diataxis.fr](https://diataxis.fr), per
+its [colophon](https://diataxis.fr/colophon/).
