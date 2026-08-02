@@ -59,6 +59,13 @@ Forbidden, Closing self-check). Rules:
   `System_Ext`, `Container`, `ContainerDb`, `System_Boundary`,
   `Container_Boundary`, `Rel`, `Rel_Back`, `title`. No `UpdateLayoutConfig`
   or other layout directives that render inconsistently across engines.
+- **No style overrides.** Mermaid's C4 default styling is fixed
+  (theme-independent) and verified to be the canonical c4model.com /
+  Structurizr palette: person `#08427B`, system `#1168BD`, container
+  `#438DD5`, external `#999999` (verified by rendering with Mermaid 11,
+  2026-08-02). `UpdateElementStyle` / `UpdateRelStyle` are forbidden —
+  the defaults already produce the standard C4 look, and overrides are
+  the first thing to break across renderer versions.
 
 ### Forbidden
 
