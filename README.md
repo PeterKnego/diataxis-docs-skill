@@ -38,11 +38,16 @@ This repository contains material under two licenses:
   © Peter Knego and licensed under the [MIT License](LICENSE).
 - **Diátaxis material** — the extracted pages under [site/txt/](site/txt/)
   and the rule sheets adapted from them under
-  [skills/diataxis-docs/references/](skills/diataxis-docs/references/) — is
+  [skills/diataxis-docs/references/](skills/diataxis-docs/references/)
+  (all except `diagrams.md`) — is
   copyright © Daniele Procida and licensed under
   [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as stated
   in the website's
   [source repository](https://github.com/evildmp/diataxis-documentation-framework).
+- **C4 model attribution** — `references/diagrams.md` is original
+  MIT-licensed text describing the [C4 model](https://c4model.com) created
+  by Simon Brown; c4model.com content is licensed under
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Changes made to the Diátaxis material: extracted from the published
 [diataxis.fr](https://diataxis.fr) pages on 2026-08-02, converted to

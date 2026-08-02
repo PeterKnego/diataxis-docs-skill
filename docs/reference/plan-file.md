@@ -32,6 +32,10 @@ The reference subsection additionally carries the proposed **scope**
 statement. Scope is an approvable item in its own right: the user approves
 it separately from the document list.
 
+The explanation subsection names, for the *About the architecture* page,
+each proposed C4 diagram level (System Context, Container). A level
+without evidence behind it appears under not-created entries instead.
+
 ### Not-created entries — *persistent*
 
 A quadrant with no genuine material is listed as **not created**. Each entry
@@ -59,6 +63,13 @@ Applied annotations are removed by the Phase 6 trim.
 The single round of user questions asked in Phase 1, with the user's
 answers. Later runs do not re-ask a question answered here unless current
 evidence contradicts the recorded answer.
+
+### Diagram evidence notes — *transient*
+
+One note per diagram element while the architecture page is drafted:
+which harvested evidence (deploy manifest, dependency, API client,
+documented role) the element traces to. Checked by the diagrams sheet's
+closing self-check; removed by the Phase 6 trim.
 
 ### Parking lot — *transient*
 

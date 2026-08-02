@@ -38,8 +38,11 @@ This directory contains material under two licenses:
   [LICENSE](../../LICENSE).
 - `references/` contains adaptations of [diataxis.fr](https://diataxis.fr)
   content, copyright © Daniele Procida, licensed under
-  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Each file
-  in `references/` carries its own attribution header.
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — except
+  `references/diagrams.md`, which is original MIT-licensed text describing
+  the [C4 model](https://c4model.com) by Simon Brown (c4model.com content
+  is CC BY 4.0). Each file in `references/` carries its own attribution
+  header.
 
 For the full attribution and licensing detail, see the repo-root
 [README.md](../../README.md).
