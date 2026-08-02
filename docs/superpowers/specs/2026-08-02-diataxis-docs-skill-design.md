@@ -157,6 +157,11 @@ longer than about seven items are sub-grouped. Cross-links are wired up:
 linking out instead of digressing is the mechanism that keeps the quadrants from
 bleeding into each other.
 
+The repo's README is wired as the documentation entry point: a short
+documentation section is added (or updated on reruns) linking the docs
+landing page, one sentence per existing quadrant landing — an overview,
+not a mirror.
+
 The run closes by trimming and committing `diataxis-plan.md`: applied
 keep/move/split annotations and the (empty) parking lot are removed; the
 durable record — document needs, audience/goal/rationale answers, approved

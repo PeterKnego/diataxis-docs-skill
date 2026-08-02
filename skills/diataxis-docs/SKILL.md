@@ -145,6 +145,14 @@ Load `references/structure.md`. Write landing pages as overviews with
 introductory prose, apply the list rule, and wire up cross-links between
 quadrants per the sheet.
 
+**Wire the README.** The repo's README is the de-facto documentation entry
+point; generated docs that the README never mentions are invisible. If the
+repo has a README, add — or update, on a rerun — a short documentation
+section linking the docs landing page, with one sentence per quadrant
+landing page that exists. Keep it an overview, not a copy of the landing
+page; the README remains the repo's front door, not a docs mirror. Respect
+any keep/split annotations already applied to the README in this run.
+
 Then close the run by trimming and committing `diataxis-plan.md`:
 
 - **Remove** what is now dead: applied keep/move/split annotations and the
