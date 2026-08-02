@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/start-here/](https://diataxis.fr/start-here/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # Start here - Diátaxis in five minutes
 
 Treat this website as a handbook or a toolbox that you make use of when you need it.

@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/how-to-use-diataxis/](https://diataxis.fr/how-to-use-diataxis/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # Diátaxis as a guide to work
 
 As well as providing a guide to documentation content, Diátaxis is also a guide to documentation process and execution.

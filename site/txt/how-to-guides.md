@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/how-to-guides/](https://diataxis.fr/how-to-guides/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # How-to guides
 
 How-to guides are directions that guide the reader through a problem or towards a result. How-to guides are goal-oriented.

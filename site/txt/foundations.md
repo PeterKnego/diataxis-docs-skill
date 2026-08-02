@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/foundations/](https://diataxis.fr/foundations/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # Foundations
 
 Diátaxis is successful because it works - both users and creators have a better experience of documentation as a result. It makes sense and it feels right.

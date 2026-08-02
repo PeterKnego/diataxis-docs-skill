@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/tutorials-how-to/](https://diataxis.fr/tutorials-how-to/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # The difference between a tutorial and how-to guide
 
 In Diátaxis, tutorials and how-to guides are strongly distinguished. It’s a distinction that’s often not made; in fact

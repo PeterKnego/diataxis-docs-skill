@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/map/](https://diataxis.fr/map/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # The map
 
 One reason Diátaxis is effective as a guide to organising documentation is

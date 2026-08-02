@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/reference/](https://diataxis.fr/reference/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # Reference
 
 Reference guides are technical descriptions of the machinery and how to operate it. Reference material is information-oriented.

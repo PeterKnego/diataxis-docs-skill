@@ -1,3 +1,9 @@
+> Source: [https://diataxis.fr/reference-explanation/](https://diataxis.fr/reference-explanation/)
+> Copyright © Daniele Procida. Licensed under
+> [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+> Changes: text extracted from the published HTML page and converted to
+> Markdown on 2026-08-02; formatting, navigation and images removed.
+
 # The difference between reference and explanation
 
 Explanation and reference both belong to the theory half of the Diátaxis map - they don’t contain
