@@ -106,7 +106,9 @@ tooling detected in Phase 0 cannot render Mermaid, note that in the plan
 and propose the fallback — a plain fenced code block with a rendering
 note — as an approvable item rather than silently degrading. Plan
 approval covers the page and its levels; the diagram rules live in
-`references/diagrams.md`.
+`references/diagrams.md`. If no level has evidence behind it, the page
+itself is a not-created entry, reason and remedy included, like any
+quadrant.
 
 Then ask the user **one batched round** of questions, covering only what the
 repo could not answer: who the audiences are, their top real-world goals, and
@@ -192,9 +194,10 @@ before committing.
 
 Then close the run by trimming and committing `diataxis-plan.md`:
 
-- **Remove** what is now dead: applied keep/move/split annotations and the
+- **Remove** what is now dead: applied keep/move/split annotations, the
   parking lot (which must be empty — unparked content means a phase closed
-  incorrectly).
+  incorrectly), and the diagram evidence notes (their diagrams are
+  committed; stale notes contradict `docs/reference/plan-file.md`).
 - **Keep** what future runs need: per-document title/need/source, the
   audience/goal/rationale answers, the approved reference scope, every
   not-created entry with its reason and remedy, and tutorial verification

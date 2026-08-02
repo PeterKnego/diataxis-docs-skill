@@ -31,11 +31,13 @@ Full documentation lives at [docs/](docs/index.md):
 
 ## Licensing and attribution
 
-This repository contains material under two licenses:
+This repository contains material under two licenses, plus one
+third-party attribution:
 
 - **Original work** — the skill design, specs, and everything outside
-  `site/txt/` and `skills/diataxis-docs/references/` — is copyright
-  © Peter Knego and licensed under the [MIT License](LICENSE).
+  `site/txt/` and `skills/diataxis-docs/references/`, plus
+  `references/diagrams.md` — is copyright © Peter Knego and licensed
+  under the [MIT License](LICENSE).
 - **Diátaxis material** — the extracted pages under [site/txt/](site/txt/)
   and the rule sheets adapted from them under
   [skills/diataxis-docs/references/](skills/diataxis-docs/references/)

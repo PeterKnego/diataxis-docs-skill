@@ -89,7 +89,7 @@ markers remain until discharged by a later verified run.
 |---|---|
 | Phase 0 | Read, if present from a prior run |
 | Phase 1 | Written or updated; presented for approval |
-| Phases 2–5 | Parking lot appended; verification notes recorded |
+| Phases 2–5 | Parking lot and diagram evidence notes appended; verification notes recorded |
 | Phase 6 | Trimmed of transient sections; committed with the docs |
 
 A committed plan file passes the Phase 0 clean-tree gate. An uncommitted,

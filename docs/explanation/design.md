@@ -124,10 +124,14 @@ at all.
 The skill's rule sheets are distilled from diataxis.fr, whose content
 Daniele Procida licenses under CC BY-SA 4.0. ShareAlike means adaptations
 must carry the same license — so the sheets do, each with an attribution
-header. The workflow logic, which is original work, is MIT like most of the
-Claude Code skill ecosystem. The split is unusual in a code repo, but the
-alternatives were worse: licensing everything CC BY-SA would burden the
-code with a license not designed for code, and licensing everything MIT
-would simply violate the source's terms. The lesson generalizes: a skill
-built on someone else's methodology inherits that methodology's license
-wherever it reproduces the methodology's text.
+header. One sheet is exempt: `references/diagrams.md` is original text
+describing Simon Brown's C4 model rather than a diataxis.fr adaptation
+(c4model.com content is CC BY 4.0), so ShareAlike does not reach it, and
+it stays MIT. The workflow logic, which is original work, is MIT like
+most of the Claude Code skill ecosystem. The split is unusual in a code
+repo, but the alternatives were worse: licensing everything CC BY-SA
+would burden the code with a license not designed for code, and
+licensing everything MIT would simply violate the source's terms. The
+lesson generalizes: a skill built on someone else's methodology inherits
+that methodology's license wherever it reproduces the methodology's
+text.

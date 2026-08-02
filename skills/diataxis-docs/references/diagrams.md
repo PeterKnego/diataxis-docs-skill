@@ -41,7 +41,7 @@ codebase and embedding them in that page. The diagrams illustrate the
 - **Register.** The page must still pass the explanation sheet's closing
   self-check (compass + bath test). A diagram dropped in with no
   surrounding narrative fails this check.
-- **Mermaid stable subset only.** Fenced ```mermaid blocks using
+- **Mermaid stable subset only.** Fenced `mermaid` code blocks using
   `C4Context` / `C4Container` with: `Person`, `System`, `System_Ext`,
   `Container`, `ContainerDb`, `System_Boundary`, `Container_Boundary`,
   `Rel`, `Rel_Back`, `title`. Nothing else — the C4 grammar is marked
@@ -99,6 +99,9 @@ sheet's own self-check:
 
 - Every element traces to an evidence note recorded in the plan file.
 - Only stable-subset keywords appear; no style or layout directives.
+- Each diagram renders: walk the Mermaid syntax mentally — balanced
+  boundary braces, quoted strings, declared identifiers in every `Rel`
+  — and verify on a rendering-capable host when one is available.
 - Each diagram title names its level and system.
 - The page reads as explanation with the diagrams removed — the prose
   carries the *why* on its own.
