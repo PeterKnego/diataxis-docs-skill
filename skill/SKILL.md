@@ -84,9 +84,9 @@ keeps the other three uncluttered. Tutorial goes last because it is the most
 expensive to produce and depends on knowing what reference and how-to
 material already exists to link out to.
 
-For a single-quadrant run, write only the requested quadrant; still respect
-the ordering relative to what is skipped (e.g. a how-to-only run still needs
-reference to exist or be stubbed as a link target per the plan).
+For a single-quadrant run, write only the requested quadrant. Link out to
+other quadrants only where they already exist; if a linked-to quadrant does
+not exist, omit the link rather than creating a placeholder for it.
 
 For each quadrant, before writing:
 
