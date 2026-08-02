@@ -1,22 +1,30 @@
 # diataxis-docs
 
-Design work for a Claude Code skill that generates a Diátaxis-shaped
-documentation set (tutorials, how-to guides, reference, explanation) from a
-codebase.
+A Claude Code skill that generates a Diátaxis-shaped documentation set
+(tutorials, how-to guides, reference, explanation) from a codebase.
 
 - Design spec: [docs/superpowers/specs/2026-08-02-diataxis-docs-skill-design.md](docs/superpowers/specs/2026-08-02-diataxis-docs-skill-design.md)
 - Source corpus: [site/txt/](site/txt/) — the pages of diataxis.fr as extracted
   text, kept as provenance so the skill's rules can be traced to their source.
+- Skill: [skill/](skill/) — the installable skill itself. Install with:
+
+  ```bash
+  ln -s "$(pwd)/skill" ~/.claude/skills/diataxis-docs
+  ```
+
+  Run from the repository root. See [skill/README.md](skill/README.md) for
+  usage.
 
 ## Licensing
 
 This repository contains material under two licenses:
 
 - **Original work** — the skill design, specs, and everything outside
-  `site/txt/` — is copyright © Peter Knego and licensed under the
-  [MIT License](LICENSE).
-- **Diátaxis source material** — everything under [site/txt/](site/txt/) — is
-  copyright © Daniele Procida and licensed under
+  `site/txt/` and `skill/references/` — is copyright © Peter Knego and
+  licensed under the [MIT License](LICENSE).
+- **Diátaxis source material** — everything under [site/txt/](site/txt/), and
+  the six rule sheets under [skill/references/](skill/references/), which are
+  CC BY-SA 4.0 adaptations — is copyright © Daniele Procida and licensed under
   [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as detailed
   below.
 
