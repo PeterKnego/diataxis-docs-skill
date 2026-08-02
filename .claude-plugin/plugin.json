@@ -1,7 +1,7 @@
 {
   "name": "diataxis-docs",
   "description": "Generate a complete Diátaxis documentation set (tutorials, how-to guides, reference, explanation) from a codebase, as a gated, phased workflow.",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "author": {
     "name": "Peter Knego",
     "email": "peter@knego.net"
