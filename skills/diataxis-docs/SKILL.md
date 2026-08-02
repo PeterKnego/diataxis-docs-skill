@@ -131,9 +131,19 @@ For each quadrant, before writing:
   - Explanation: `references/explanation.md`
   - Tutorials: `references/tutorials.md`
 
+Apply this quadrant's **move** and **split** annotations from the plan as
+rewrites: content moved here is held to this quadrant's rule sheet exactly
+like newly written content. A move is a rewrite into the destination
+register, not a relocation with fact fixes — reference tables, instruction,
+or teaching that arrive inside moved content are rewritten or linked out,
+the same as anywhere else.
+
 Before closing each phase:
 
-1. Run the sheet's own closing self-check.
+1. Run the sheet's own closing self-check on every page — including pages
+   assembled from moved content — at section granularity as well as whole
+   page. Register violations live in sections of pages that pass at a
+   distance.
 2. Park any content that belongs to a quadrant not yet written (e.g.
    explanation surfacing while writing reference) in `diataxis-plan.md`,
    tagged for its future phase. Do not write it into the current quadrant
@@ -152,6 +162,12 @@ section linking the docs landing page, with one sentence per quadrant
 landing page that exists. Keep it an overview, not a copy of the landing
 page; the README remains the repo's front door, not a docs mirror. Respect
 any keep/split annotations already applied to the README in this run.
+
+**Verify standing decisions.** Re-read every standing decision and
+constraint recorded in the plan file — link policies, scope limits,
+directories declared off-limits — and check the generated pages against
+each one. A decision recorded in the plan binds the output; fix violations
+before committing.
 
 Then close the run by trimming and committing `diataxis-plan.md`:
 

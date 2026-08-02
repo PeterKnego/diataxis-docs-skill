@@ -62,7 +62,9 @@ documents — these are where the *why* behind a decision actually lives.
 
 ## Closing self-check
 
-Run the compass check from `references/compass.md` on each page: it must land
-in informs-cognition / acquisition-of-skill. Then apply the bath test — would
-someone read this away from the keyboard, reflecting rather than working? If
-not, it has drifted toward reference or a how-to guide.
+Run the compass check from `references/compass.md` on each page, section by
+section as well as whole-page — adapted pages especially tend to pass at a
+distance while single sections remain reference tables or structure dumps. It
+must land in informs-cognition / acquisition-of-skill. Then apply the bath
+test — would someone read this away from the keyboard, reflecting rather
+than working? If not, it has drifted toward reference or a how-to guide.

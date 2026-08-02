@@ -146,9 +146,18 @@ it is the most expensive to produce and can only be constructed once the writer
 knows what reference and how-to material exists to link out to.
 
 Each quadrant is written with its rule sheet loaded, and runs a compass
-self-check before closing. Content that belongs in a quadrant not yet written
-(e.g. explanation surfacing during the reference phase) is parked in the plan
-file and picked up when its phase arrives.
+self-check before closing — at section granularity as well as whole-page,
+since register violations typically live in sections of pages that pass at
+a distance. Content moved or split into a quadrant is held to the same
+sheet and self-check as newly written content: a move is a rewrite into the
+destination register, not a relocation. Content that belongs in a quadrant
+not yet written (e.g. explanation surfacing during the reference phase) is
+parked in the plan file and picked up when its phase arrives.
+
+Reference additionally requires provenance for measured numbers (a dated,
+archived run record, or the number is omitted), and applies the autodoc
+rule at section level: hand-written pages must not restate doc-comment
+content, only synthesize what no single API item carries.
 
 ### Phase 6 — Assemble structure
 
@@ -161,6 +170,10 @@ The repo's README is wired as the documentation entry point: a short
 documentation section is added (or updated on reruns) linking the docs
 landing page, one sentence per existing quadrant landing — an overview,
 not a mirror.
+
+Before the closing commit, the generated pages are verified against every
+standing decision recorded in the plan file — a decision recorded in the
+plan binds the output.
 
 The run closes by trimming and committing `diataxis-plan.md`: applied
 keep/move/split annotations and the (empty) parking lot are removed; the

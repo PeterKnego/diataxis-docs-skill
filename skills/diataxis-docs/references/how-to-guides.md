@@ -74,6 +74,8 @@ Each of these has a home elsewhere — link out instead of writing it here:
 
 ## Closing self-check
 
-Run the compass check from `references/compass.md` on each guide: it must
-land in informs-action / application-of-skill. And ask, per guide: what human
+Run the compass check from `references/compass.md` on each guide, section by
+section as well as whole-guide — a guide can pass at a distance while one of
+its sections teaches or turns into a reference table. It must land in
+informs-action / application-of-skill. And ask, per guide: what human
 project does this serve? The answer must not be a tool operation.

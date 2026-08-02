@@ -26,6 +26,9 @@ an orderly way. It is led by the product it describes, not by the user.
 - **Verify every claim against source.** Note file:line for each claim in the
   plan file while drafting, not in the published page.
 - **Examples are permitted as illustration only.**
+- **Measured numbers carry provenance.** Any benchmark or measured figure
+  cites a dated, archived run record; a number with no artifact behind it
+  does not go in.
 
 ## Forbidden
 
@@ -49,8 +52,14 @@ produces reference material for this codebase, improve the docstrings and the
 structure feeding that pipeline. Never write parallel pages — they drift from
 the generated output.
 
+The rule applies at section level too: do not restate doc-comment content in
+hand-written tables. Hand-written reference carries only what no single API
+item can — cross-cutting matrices, legal combinations, wire formats — and
+links to the generated docs for per-item detail.
+
 ## Closing self-check
 
-Run the compass check from `references/compass.md` on each page. Everything
-must land in informs-cognition / application-of-skill. Move (don't delete)
-anything that doesn't — park it in the plan file.
+Run the compass check from `references/compass.md` on each page, section by
+section as well as whole-page — a page can pass at a distance and fail close
+up. Everything must land in informs-cognition / application-of-skill. Move
+(don't delete) anything that doesn't — park it in the plan file.

@@ -58,6 +58,7 @@ something works without having run it.
 
 ## Closing self-check
 
-Run the compass check from `references/compass.md`: it must land in
-informs-action / acquisition-of-skill. Then ask: does every step show its
-expected result? Is there any fork? A fork is a failure.
+Run the compass check from `references/compass.md`, section by section as
+well as whole-tutorial: it must land in informs-action /
+acquisition-of-skill. Then ask: does every step show its expected result?
+Is there any fork? A fork is a failure.
