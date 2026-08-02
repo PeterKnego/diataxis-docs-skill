@@ -25,14 +25,18 @@ Do not write or move any file in this phase.
 
 1. **Clean-tree gate.** Confirm the repo is under git (`git rev-parse
    --is-inside-work-tree`) with a clean working tree (`git status
-   --porcelain` empty). If either check fails, STOP and offer to run `git
-   init` or to commit/stash outstanding changes first. Do not proceed until
+   --porcelain` empty). If the repo is not under git, STOP and offer to run
+   `git init` *and* make an initial commit — `git init` alone leaves every
+   file untracked and still fails this gate. If the tree is dirty, STOP and
+   offer to commit or stash the outstanding changes. Do not proceed until
    the tree is clean — later phases move and split human-written files, and
    every such change must be revertable.
-2. **Docs tooling detection.** Look for `mkdocs.yml`, `conf.py`,
-   `docusaurus.config.*`, or a bare `docs/` directory. Whatever is found
-   fixes the output format and location for everything written in Phases
-   2–6; absent any of these, fall back to Markdown under `docs/`.
+2. **Docs tooling detection.** Look in the repo root and in `docs/` for
+   `mkdocs.yml`, `conf.py`, `docusaurus.config.*`, or a `docs/` directory
+   with no generator config beside it. Whatever is found fixes the output
+   format and location for everything written in Phases 2–6; if a generator
+   config and a bare `docs/` are both present, the generator config wins.
+   Absent any of these, fall back to Markdown under `docs/`.
 3. **Autodoc detection.** Look for Sphinx autodoc config, `typedoc.json`,
    godoc conventions, `cargo doc` / rustdoc setup, or similar. Where one is
    found, it sets the reference-phase mode — see the Autodoc rule in
@@ -41,11 +45,14 @@ Do not write or move any file in this phase.
    commands, config options, and module structure.
 5. **Need-evidence harvest.** Read README, CHANGELOG, ADRs, design docs,
    `examples/`, integration and end-to-end tests (the best available source
-   of real user goals), commit history, PR/issue titles via `gh` when
-   available, and docstrings/inline comments.
+   of real user goals), commit history, PR/issue titles via `gh` when the
+   repo has a GitHub remote and `gh` is authenticated (skip this source
+   otherwise), and docstrings/inline comments.
 6. **Classify existing docs.** Load `references/compass.md` and run every
-   existing piece of documentation through it. Record each piece's quadrant
-   (or "misclassified" / "blurred") for use in Phase 1.
+   existing piece of documentation through it — section by section as well
+   as whole-document, since a document can pass at the wide view and still
+   fail at the close view. Record the quadrant of each document *and of each
+   of its sections* (or "misclassified" / "blurred") for use in Phase 1.
 
 ## Phase 1 — Plan and gap confirmation
 
@@ -57,7 +64,11 @@ so site generators never render it. For every proposed document, record:
 - the source material backing it
 
 Annotate every existing doc from the Phase 0 compass pass as **keep**,
-**move**, or **split**. List the proposed reference **scope** (e.g. public
+**move**, or **split**, at the section granularity that pass recorded. For
+every **move** and for every part of every **split**, name the destination
+quadrant and the destination document — an annotation with no destination
+cannot be approved and leaves the content with nowhere to go in Phases 2–6.
+List the proposed reference **scope** (e.g. public
 API only, or top-level modules) as its own approvable item — "document the
 product surface" is unbounded on a large codebase, and the user approves
 scope, not just the document list. A quadrant with no genuine material
@@ -66,7 +77,10 @@ placeholder. An empty section is itself the forbidden scaffold.
 
 Then ask the user **one batched round** of questions, covering only what the
 repo could not answer: who the audiences are, their top real-world goals, and
-which decisions carry rationale worth explaining.
+which decisions carry rationale worth explaining. Fold the answers back into
+`diataxis-plan.md` before asking for approval — those answers decide which
+documents exist, so the plan put up for approval must be the revised one, not
+the draft written before the questions were asked.
 
 **STOP. Do not write, move, or split any documentation file until the user
 has explicitly approved the plan and the reference scope.** Presenting the
@@ -87,6 +101,10 @@ material already exists to link out to.
 For a single-quadrant run, write only the requested quadrant. Link out to
 other quadrants only where they already exist; if a linked-to quadrant does
 not exist, omit the link rather than creating a placeholder for it.
+
+Write each quadrant's pages into their own directory under the output
+location fixed in Phase 0 (e.g. `docs/reference/`). Phase 6 adds the landing
+pages and cross-links on top of that placement; it does not relocate pages.
 
 For each quadrant, before writing:
 

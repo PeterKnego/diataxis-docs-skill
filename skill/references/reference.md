@@ -18,9 +18,13 @@ an orderly way. It is led by the product it describes, not by the user.
 - **Neutral description only.** State what the machinery is and does; nothing
   else.
 - **One consistent entry pattern for every entry:** name → signature →
-  parameters → returns → errors/exceptions → defaults/limits → example.
-- **Verify every claim against source.** Note file:line for each claim while
-  drafting.
+  parameters → returns → errors/exceptions → defaults/limits → example. Where
+  a field does not apply to a kind of entry — an environment variable has no
+  signature and no return value — omit that field rather than filling it with
+  "N/A", and keep the remaining fields in this order. Every entry of the same
+  kind carries the same fields.
+- **Verify every claim against source.** Note file:line for each claim in the
+  plan file while drafting, not in the published page.
 - **Examples are permitted as illustration only.**
 
 ## Forbidden
