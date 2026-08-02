@@ -106,7 +106,9 @@ Inventory existing documentation and classify each piece with the compass.
 ### Phase 1 — Plan and gap confirmation
 
 Write `diataxis-plan.md` at the repo root, outside any published docs tree,
-so site generators never render it.
+so site generators never render it. The plan file is persistent: a prior
+run's committed plan is read in Phase 0 as established context, and this
+phase updates it rather than starting blank.
 It contains, for every proposed document: its title, the user need it serves,
 and the source material backing it. Existing docs are annotated
 keep / move / split.
@@ -123,11 +125,16 @@ cannot answer:
 - their top real-world goals
 - which decisions carry rationale worth explaining
 
+Answers recorded in a prior run's plan are not re-asked unless contradicted
+by current evidence.
+
 The user approves the plan before any documentation is written.
 
 A quadrant with no genuine material is not created at all — no directory, no
 landing page — and the plan says so. An empty section is itself the forbidden
-scaffold.
+scaffold. Every not-created entry states its reason (what material is
+missing) and a remedy (what would make the quadrant creatable in a future
+run); a bare "not created" cannot be approved.
 
 ### Phases 2–5 — Write, one quadrant at a time
 
@@ -149,6 +156,14 @@ Landing pages read as overviews with introductory prose, not bare lists. Lists
 longer than about seven items are sub-grouped. Cross-links are wired up:
 linking out instead of digressing is the mechanism that keeps the quadrants from
 bleeding into each other.
+
+The run closes by trimming and committing `diataxis-plan.md`: applied
+keep/move/split annotations and the (empty) parking lot are removed; the
+durable record — document needs, audience/goal/rationale answers, approved
+reference scope, not-created reasons and remedies, tutorial verification
+status — is kept and committed with the generated docs. A committed plan
+passes the Phase 0 clean-tree gate on the next run and serves as the skill's
+persistent memory of user needs.
 
 ## Per-quadrant rules
 

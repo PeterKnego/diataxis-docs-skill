@@ -31,24 +31,30 @@ Do not write or move any file in this phase.
    offer to commit or stash the outstanding changes. Do not proceed until
    the tree is clean — later phases move and split human-written files, and
    every such change must be revertable.
-2. **Docs tooling detection.** Look in the repo root and in `docs/` for
+2. **Prior plan.** If `diataxis-plan.md` exists at the repo root, read it.
+   It is the durable record of previous runs: audiences, real-world goals,
+   decisions worth explaining, approved reference scope, not-created
+   quadrant reasoning, and tutorial verification status. Treat its contents
+   as established context — Phase 1 updates this file rather than starting
+   blank, and re-asks only what the current run's evidence contradicts.
+3. **Docs tooling detection.** Look in the repo root and in `docs/` for
    `mkdocs.yml`, `conf.py`, `docusaurus.config.*`, or a `docs/` directory
    with no generator config beside it. Whatever is found fixes the output
    format and location for everything written in Phases 2–6; if a generator
    config and a bare `docs/` are both present, the generator config wins.
    Absent any of these, fall back to Markdown under `docs/`.
-3. **Autodoc detection.** Look for Sphinx autodoc config, `typedoc.json`,
+4. **Autodoc detection.** Look for Sphinx autodoc config, `typedoc.json`,
    godoc conventions, `cargo doc` / rustdoc setup, or similar. Where one is
    found, it sets the reference-phase mode — see the Autodoc rule in
    `references/reference.md` before writing reference material.
-4. **Product-surface mapping.** Identify entry points, public exports, CLI
+5. **Product-surface mapping.** Identify entry points, public exports, CLI
    commands, config options, and module structure.
-5. **Need-evidence harvest.** Read README, CHANGELOG, ADRs, design docs,
+6. **Need-evidence harvest.** Read README, CHANGELOG, ADRs, design docs,
    `examples/`, integration and end-to-end tests (the best available source
    of real user goals), commit history, PR/issue titles via `gh` when the
    repo has a GitHub remote and `gh` is authenticated (skip this source
    otherwise), and docstrings/inline comments.
-6. **Classify existing docs.** Load `references/compass.md` and run every
+7. **Classify existing docs.** Load `references/compass.md` and run every
    existing piece of documentation through it — section by section as well
    as whole-document, since a document can pass at the wide view and still
    fail at the close view. Record the quadrant of each document *and of each
@@ -57,7 +63,9 @@ Do not write or move any file in this phase.
 ## Phase 1 — Plan and gap confirmation
 
 Write `diataxis-plan.md` at the repo root, outside any published docs tree,
-so site generators never render it. For every proposed document, record:
+so site generators never render it. If a prior plan exists (Phase 0), update
+it in place — keep its durable answers, add this run's proposals — instead of
+starting blank. For every proposed document, record:
 
 - title
 - the user need it serves
@@ -73,11 +81,19 @@ API only, or top-level modules) as its own approvable item — "document the
 product surface" is unbounded on a large codebase, and the user approves
 scope, not just the document list. A quadrant with no genuine material
 backing it is listed as **not created** — no directory, no landing page, no
-placeholder. An empty section is itself the forbidden scaffold.
+placeholder. An empty section is itself the forbidden scaffold. Every
+**not created** entry must state (a) the reason — what material is missing
+(e.g. "no user-goal evidence found: no examples/, no e2e tests, no issues"),
+and (b) a remedy — what would make the quadrant creatable in a future run
+(e.g. "add an examples/ script per supported workflow", "answer the audience
+questions", "record ADRs for the decisions worth explaining"). A bare "not
+created" with no reason and remedy cannot be approved.
 
 Then ask the user **one batched round** of questions, covering only what the
 repo could not answer: who the audiences are, their top real-world goals, and
-which decisions carry rationale worth explaining. Fold the answers back into
+which decisions carry rationale worth explaining. Answers already recorded in
+a prior plan are not re-asked unless this run's evidence contradicts them.
+Fold the answers back into
 `diataxis-plan.md` before asking for approval — those answers decide which
 documents exist, so the plan put up for approval must be the revised one, not
 the draft written before the questions were asked.
@@ -128,6 +144,19 @@ Before closing each phase:
 Load `references/structure.md`. Write landing pages as overviews with
 introductory prose, apply the list rule, and wire up cross-links between
 quadrants per the sheet.
+
+Then close the run by trimming and committing `diataxis-plan.md`:
+
+- **Remove** what is now dead: applied keep/move/split annotations and the
+  parking lot (which must be empty — unparked content means a phase closed
+  incorrectly).
+- **Keep** what future runs need: per-document title/need/source, the
+  audience/goal/rationale answers, the approved reference scope, every
+  not-created entry with its reason and remedy, and tutorial verification
+  status (verified / unverified markers stay until discharged).
+- **Commit** the trimmed plan together with the generated documentation.
+  The Phase 0 clean-tree gate depends on this: a committed plan passes it;
+  a leftover dirty plan blocks every future run.
 
 ## Guards
 
