@@ -193,7 +193,7 @@ Explicitly blocked:
 
 ## Provenance
 
-The full diataxis.fr corpus (18 pages) is committed under `site/` — `site/html/`
-as retrieved, `site/txt/` as extracted text. The reference sheets are distilled
-from this corpus, so the skill's rules can be traced back to their source and
-re-derived if the site changes.
+The full diataxis.fr corpus (18 pages) is committed under `site/txt/` as text
+extracted from the published pages, retrieved 2026-08-02. The reference sheets
+are distilled from this corpus, so the skill's rules can be traced back to their
+source and re-derived if the site changes.
