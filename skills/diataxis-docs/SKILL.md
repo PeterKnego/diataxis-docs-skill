@@ -49,12 +49,19 @@ Do not write or move any file in this phase.
    `references/reference.md` before writing reference material.
 5. **Product-surface mapping.** Identify entry points, public exports, CLI
    commands, config options, and module structure.
-6. **Need-evidence harvest.** Read README, CHANGELOG, ADRs, design docs,
+6. **Architecture-evidence harvest.** Identify deployable units, external
+   systems, and actors — from deploy manifests (docker-compose,
+   Kubernetes, Procfile), service entry points, external API clients, and
+   documented user roles — recording where each item was found. This
+   evidence backs the C4 diagrams proposed for the architecture
+   explanation page; the rules live in `references/diagrams.md`, loaded
+   only in the explanation phase.
+7. **Need-evidence harvest.** Read README, CHANGELOG, ADRs, design docs,
    `examples/`, integration and end-to-end tests (the best available source
    of real user goals), commit history, PR/issue titles via `gh` when the
    repo has a GitHub remote and `gh` is authenticated (skip this source
    otherwise), and docstrings/inline comments.
-7. **Classify existing docs.** Load `references/compass.md` and run every
+8. **Classify existing docs.** Load `references/compass.md` and run every
    existing piece of documentation through it — section by section as well
    as whole-document, since a document can pass at the wide view and still
    fail at the close view. Record the quadrant of each document *and of each
@@ -88,6 +95,18 @@ and (b) a remedy — what would make the quadrant creatable in a future run
 (e.g. "add an examples/ script per supported workflow", "answer the audience
 questions", "record ADRs for the decisions worth explaining"). A bare "not
 created" with no reason and remedy cannot be approved.
+
+When the architecture-evidence harvest found material for them, the plan
+proposes an *About the architecture* explanation page carrying C4
+diagrams, naming each proposed level — System Context, Container — in
+the entry. A level without evidence behind it (e.g. a single deployable
+unit makes a Container diagram redundant) is recorded as a not-created
+entry with reason and remedy, exactly like a quadrant. If the docs
+tooling detected in Phase 0 cannot render Mermaid, note that in the plan
+and propose the fallback — a plain fenced code block with a rendering
+note — as an approvable item rather than silently degrading. Plan
+approval covers the page and its levels; the diagram rules live in
+`references/diagrams.md`.
 
 Then ask the user **one batched round** of questions, covering only what the
 repo could not answer: who the audiences are, their top real-world goals, and
@@ -128,7 +147,9 @@ For each quadrant, before writing:
   currently being written:
   - Reference: `references/reference.md`
   - How-to guides: `references/how-to-guides.md`
-  - Explanation: `references/explanation.md`
+  - Explanation: `references/explanation.md` — plus
+    `references/diagrams.md` when the approved plan includes the
+    architecture page
   - Tutorials: `references/tutorials.md`
 
 Apply this quadrant's **move** and **split** annotations from the plan as
@@ -201,4 +222,7 @@ Misplaced content is always moved, never deleted.
 This file (`SKILL.md`) is original work, copyright © Peter Knego, licensed
 under the MIT License. The rule sheets under `references/` are adaptations
 of [diataxis.fr](https://diataxis.fr) content, copyright © Daniele Procida,
-licensed under CC BY-SA 4.0 — each carries its own attribution header.
+licensed under CC BY-SA 4.0 — each carries its own attribution header —
+except `references/diagrams.md`, which is original MIT-licensed text
+describing the [C4 model](https://c4model.com) by Simon Brown (c4model.com
+content is CC BY 4.0).
