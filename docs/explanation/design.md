@@ -84,6 +84,41 @@ remote services) it marks *unverified* rather than implying a verification
 that never happened. Some tutorials therefore ship with visible caveats.
 That is by design: an honest caveat is recoverable, a false promise is not.
 
+## Does Diátaxis even permit a tool like this?
+
+The site is often summarized as "don't auto-generate docs," but it actually
+issues three narrower commandments, and they are worth separating, because
+the skill answers each differently.
+
+*"Auto-generated reference is not all the documentation required."* Diátaxis
+does not oppose generating reference — it calls generation "a powerful way
+of ensuring that it remains faithfully accurate to the code." The sin it
+names is stopping there. The skill inverts the usual generator's
+proportions: reference is the only quadrant it derives from code alone, and
+the other three are the point of the exercise.
+
+*"The other quadrants are led by user needs, and needs are not in the
+code."* This is the real argument against generation, and the skill's
+answer is that it does not generate those quadrants from code. It treats
+the repository as evidence of needs — examples, end-to-end tests, issues
+and changelogs are traces of what people actually do — and asks the user
+to supply only what the evidence cannot. Where neither produces genuine
+material, the quadrant is not created, with the reason recorded, rather
+than filled with plausible filler.
+
+*"Don't impose structure top-down; work in small steps."* Here the honest
+answer is: partially. The anti-scaffold guard and the approval gate satisfy
+the letter — nothing empty is created, and no structure lands without a
+human approving each document against a named need. But Diátaxis prescribes
+one small improvement at a time, and a skill run is still a batch. The
+mitigations — the gate, single-quadrant runs, the persistent plan file that
+makes reruns propose deltas instead of regeneration — turn one big bang
+into a series of approved, revertable steps. That is a good-faith
+translation of the workflow into a tool, not a perfect embodiment of it.
+Someone who wants the pure Diátaxis workflow should work by hand with the
+compass; the skill is for when that discipline would otherwise not happen
+at all.
+
 ## Why the licensing is split
 
 The skill's rule sheets are distilled from diataxis.fr, whose content
