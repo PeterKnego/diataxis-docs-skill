@@ -1,4 +1,4 @@
-# diataxis-docs
+# Diataxis Documentation Skill
 
 A Claude Code skill that generates a Diátaxis-shaped documentation set
 (tutorials, how-to guides, reference, explanation) from a codebase.
