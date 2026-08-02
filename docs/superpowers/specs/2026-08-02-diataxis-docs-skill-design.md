@@ -238,3 +238,17 @@ The corpus is © Daniele Procida, licensed CC BY-SA 4.0 (see README). The
 skill's `references/` sheets are adaptations of it, so under the ShareAlike
 condition they must carry the same attribution header and license as the
 `site/txt/` files.
+
+## Licensing
+
+The skill is dual-licensed:
+
+- **Original work** — SKILL.md, the workflow, phase logic and guards — is
+  copyright © Peter Knego, licensed under the MIT License.
+- **`references/` rule sheets** — adaptations of diataxis.fr content — are
+  copyright © Daniele Procida, licensed under CC BY-SA 4.0, each carrying the
+  attribution header described above.
+
+The skill's README must state this split explicitly. The same split applies to
+this repository: the spec and other original material are © Peter Knego (MIT);
+`site/txt/` is © Daniele Procida (CC BY-SA 4.0).

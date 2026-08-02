@@ -8,13 +8,23 @@ codebase.
 - Source corpus: [site/txt/](site/txt/) — the pages of diataxis.fr as extracted
   text, kept as provenance so the skill's rules can be traced to their source.
 
-## Attribution and licensing
+## Licensing
+
+This repository contains material under two licenses:
+
+- **Original work** — the skill design, specs, and everything outside
+  `site/txt/` — is copyright © Peter Knego and licensed under the
+  [MIT License](LICENSE).
+- **Diátaxis source material** — everything under [site/txt/](site/txt/) — is
+  copyright © Daniele Procida and licensed under
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as detailed
+  below.
+
+## Attribution for the Diátaxis material
 
 The files under [site/txt/](site/txt/) are extracted from
-[diataxis.fr](https://diataxis.fr), copyright © **Daniele Procida**, and are
-licensed under
-[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
-The license of the original material is stated in the
+[diataxis.fr](https://diataxis.fr). The license of the original material is
+stated in the
 [source repository](https://github.com/evildmp/diataxis-documentation-framework)
 for the website.
 
